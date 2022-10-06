@@ -1,0 +1,1 @@
+Calculating the fourier transform of the stock pricing of Nasdaq 100.
