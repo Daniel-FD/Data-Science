@@ -16,6 +16,8 @@ Why a monkey? When thiking about this project, I associated the research questio
 
 ## When will the monkey invest?
 
+We give the choice of different stragedies. 
+
 ## How much will the monkey invest?
 
 ## Where will the monkey invest? [^1]
