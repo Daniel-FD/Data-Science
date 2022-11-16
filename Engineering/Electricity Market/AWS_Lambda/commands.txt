@@ -1,0 +1,32 @@
+mkdir packages
+cd packages
+python3.8 -m venv venv
+source venv/bin/activate
+mkdir python
+cd python
+pip install sqlalchemy -t .
+pip install entsoe-py -t .
+rm -rf *.whl *.dist-info __pycache__
+cd ..
+zip -r lambda_requirements.zip python
+
+pip install numpy==1.23.4 -t .
+
+# Notes:
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.8 from "/var/lang/bin/python3.8"
+  * The NumPy version is: "1.23.4"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.

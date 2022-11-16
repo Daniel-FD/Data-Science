@@ -1,0 +1,20 @@
+python3 -m venv env
+source env/bin/activate
+#
+pip install pandas  
+pip install pymysql
+pip install entsoe-py     
+pip install sqlalchemy   
+#   
+python3 -m pip freeze > requirements.txt
+# 
+docker build -t aws_lambda_prices .   
+docker run -p 9000:8080 aws_lambda_prices
+#
+https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-images.html#configuration-images-create
+#
+docker build -t aws_lambda_prices .   
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 475134737637.dkr.ecr.us-east-1.amazonaws.com    
+aws ecr create-repository --repository-name aws_lambda_prices --image-scanning-configuration scanOnPush=true --image-tag-mutability MUTABLE
+docker tag  aws_lambda_prices:latest 475134737637.dkr.ecr.us-east-1.amazonaws.com/aws_lambda_prices:latest
+docker push 475134737637.dkr.ecr.us-east-1.amazonaws.com/aws_lambda_prices:latest        
