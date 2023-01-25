@@ -1,13 +1,19 @@
 top_to_bottom_angle_ref = -90
-top_to_bottom_angle_max_deviation = 1
+top_to_bottom_angle_max_deviation = 20
 #
 left_to_right_angle_ref = 0
-left_to_right_angle_max_deviation_perc = 1
+left_to_right_angle_max_deviation_perc = 20
 #
-area_ratio_right_to_left_max_deviation_perc = 3
+area_ratio_right_to_left_max_deviation_perc = 20
 area_ratio_right_to_left_ref = 0
 # 
 landmarks = {
+        'noseTip': [1],
+        'rightCheek': [205],
+        'leftCheek': [425],
+        'leftCheekToNose': [205, 1],
+        'noseToRightCheek': [1, 425],
+        'midwayBetweenEyes': [168],
         'topToBottom': [10, 152],
         'leftToRight': [234, 454],
         'rightEyeIris': [473, 474, 475, 476, 477],
