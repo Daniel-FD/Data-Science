@@ -18,3 +18,7 @@ Solution:
 6. Screen instructions.
 7. Screen instructions.
 8. Screen instructions. Photo taken directly from the application - which prevents cropping or unoriginal photos.
+
+
+More ideas:
+1. Detecting ears to ensure that the right and left sides of the client are symmetrical.

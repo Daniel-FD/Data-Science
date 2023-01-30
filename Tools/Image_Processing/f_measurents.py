@@ -58,7 +58,6 @@ def put_text_args(height, width, n_lines, scale):
     line_width = int(font_thickness)
     point_width = int(font_thickness)
     thickness_oval = int(1.5*font_thickness)
-
     # 
     x_position_0 = int(width/20)
     top_padding = height/20
@@ -240,6 +239,7 @@ colour_line = (255, 0, 0)
 colour_point = (255, 0, 0)
 colour_rectangle = (255, 255, 255)
 colour_oval = (255, 255, 255)
+colour_point_iris = (0, 255, 0)
 
 def print_face_mesh_image(image, result):
     height, width = height_width_image(image)
@@ -260,8 +260,8 @@ def print_iris_location(image, mesh_points, landmarks):
 def print_center_iris(image, iris_position):
     center_left_iris = iris_position[0]
     center_right_iris = iris_position[1]
-    image = cv2.circle(image, center_left_iris, 1, colour_point, point_width)
-    image = cv2.circle(image, center_right_iris, 1, colour_point, point_width)
+    image = cv2.circle(image, center_left_iris, 1, colour_point_iris, 10*point_width)
+    image = cv2.circle(image, center_right_iris, 1, colour_point_iris, 10*point_width)
     return image
 
 def print_line_left_to_right_iris(image, iris_position):
@@ -355,6 +355,12 @@ def screenprint_area_right_to_left_silhoutte(image, area_right_to_left_silhoutte
 def screenprint_nose_to_cheek(image,left_cheek_to_nose_angle,nose_to_right_cheek_angle):
     image = cv2.putText(image, f'Nose-Cheek Angles: {str(round(left_cheek_to_nose_angle,3)), str(round(nose_to_right_cheek_angle,3))} [degrees]', (x_position_0,int(y_position_v[4])), cv2.FONT_HERSHEY_PLAIN, font_scale,colour_text, font_thickness)
     return image
+
+
+# ---------------------------------
+# MAIN FUNCTION
+# ---------------------------------
+
 
 def process_image(image, landmarks, top_to_bottom_angle_ref, top_to_bottom_angle_max_deviation, left_to_right_angle_ref, left_to_right_angle_max_deviation_perc, area_ratio_right_to_left_max_deviation_perc, area_ratio_right_to_left_ref):
     # 
