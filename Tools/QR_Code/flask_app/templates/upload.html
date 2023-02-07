@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--<h2> Online Conversion </h2>-->
+<!-- <img src= "{{ url_for('static', filename='bryant_dental.png')}}",
+     width="250" ,height="250"> -->
+<h3> QR Code Generator </h3>
+<!--<body> daniel@bryant.dental <body>-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <br>
+      <input type=submit value='1. Upload'>
+<!--      <a href="{{ url_for('download') }}"><button class='btn btn-default'>Download</button></a>-->
+    </form>
+  </body>
+  <body>
+      <a href="{{ url_for('download') }}"><button class='btn btn-default'>2. Download</button></a>
+  </body>
+</html>
