@@ -7,4 +7,5 @@ eb health
 # for updating
 env_name = 'qr-ops-trigger-dev'
 eb deploy {env_name}
+eb deploy qr-ops-trigger-dev
 # cd /Users/danielfiuzadosil/Documents/GitHub_Repo/Data-Science/Tools/QR_Code/app_qr_redirect

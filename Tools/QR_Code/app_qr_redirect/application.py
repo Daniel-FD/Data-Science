@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 import requests
 import json
+from functions import *
+import webbrowser
 # from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 
 
@@ -10,7 +12,7 @@ webhook_url_0 = 'https://hooks.zapier.com/hooks/catch/1864978/3ybl903/'
 #
 # http://127.0.0.1:5001/BD17110
 # http://127.0.0.1:5001/?payload=%7B%22uniqueID%22%3A+%22BD17110%22%7D
-
+# 'https://inventory.dearsystems.com/Sale#'
 
 @application.route("/favicon.ico", methods=['GET', 'POST'])
 def favicon_redirect():
@@ -74,6 +76,18 @@ def index():
         print(data)
         print("------------------------")
         return redirect(url_for('send_webhook', payload=data))
+    elif request.form.get('Open CRM Record') == 'Open CRM Record':
+        print("Button <Open CRM Record> clicked!")
+        crm_link = obtain_crm_link_from_airtable(uniqueID)
+        return redirect(crm_link)
+        # webbrowser.open(crm_link)
+        # return redirect(url_for("index"))
+    elif request.form.get('Open DEAR Record') == 'Open DEAR Record':
+        print("Button <Open DEAR Record> clicked!")
+        dear_link = obtain_dear_link_from_airtable(uniqueID)
+        return redirect(dear_link)
+        # webbrowser.open(dear_link)
+        # return redirect(url_for("index"))
     else:
         return render_template("index.html")
 
