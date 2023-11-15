@@ -1,0 +1,7 @@
+pandas
+dataprep
+pycaret
+xgboost
+catboost
+ipywidgets
+optuna
