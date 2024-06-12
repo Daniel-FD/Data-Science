@@ -1,5 +1,5 @@
 import json
-
+# 
 def lambda_handler(event, context):
   name= event["queryStringParameters"]['name']
   surname= event["queryStringParameters"]['surname']
