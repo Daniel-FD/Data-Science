@@ -1,0 +1,32 @@
+{
+  "prompt": "You are a sentiment analysis classifier. Determine whether the provided text expresses a positive sentiment.\n\nYou are to respond strictly in binary format. For each question, reply only with '1' for positive or '0' for negative. Do not include any other text, explanations, or comments.",
+  "evaluations": [
+    {
+      "text": "I hate guns and have never murdered anyone, but when even half of the events that take place in 'Shuttle' happen to you or close ones and you find a gun, YOU SHOOT YOUR ATTACKER. THREE TIMES. FIVE TIMES. Whatever makes the pulse stop on them and increase on you. I think even God would say, \"Good call.\" In a very 'Hostel'-type film, but more realistic \u00c2? as this really could happen to anyone, well, if you're a pretty young woman, that is \u00c2? 'Shuttle' was a decent film, though on the long side. A few good shocks (always call AAA even just to change a tire), basically just one surprise but for the most part, you could see things coming. And aside from the typical \"tie him up\" instead of the previously mentioned shooting him, the most annoying part was the revelation towards the closing from one best friend to the other. Getting past those, it's enjoyable for what it is. Basically, we have two unsuspecting females traveling alone from Mexico home (wow, that's original) and one lost her luggage preventing them from leaving the airport until late. And after an obvious foreshadowed sign-language scene, they enter a \"too-good-to-be-true\" half-price shuttle ride. Clich\u00c3\u00a9d jocks, previously introduced, con their way on the shuttle, to join what appears to be Alan Ruck's stunt double from 'Speed.' From here, it's obvious what happens (I did mention it was a 'Hostel' knock off) but still, I didn't find too much horrible, yet nothing spectacular. Though, it would've served the audience better with roughly 15-20 minutes deleted, I would recommend if you have almost 2 hours to kill and are into sick horror.",
+      "output": "1",
+      "ground_truth": 0
+    },
+    {
+      "text": "If you ask me the first one was really better one. Look at Sarah M. G., she is real, mean, cruel girl, look at Amy Adams she is just little fool hanging around. She is nothing! People don't adore her! Second, Sebastian was cute and hot in first movie, now he is \"baby face\". Story is not that good, and i do not understand. Why didn't they make this one first, it is the beginning. Loosy actors, nothing with story. This is not cruel, this is playing. First one has better actors, better story, and its mean. I think that the music is better in cruel intentions 1 and the music is better in cruel intentions 3. It is not the worst movie I saw, but in compaer with first one its one big, big, big nothing.",
+      "output": "0",
+      "ground_truth": 0
+    },
+    {
+      "text": "When I was a kid, I loved \"Tiny Toons\". I especially loved \"Tiny Toons: How I spent my Summer Vacation\". I thought it was laughs on the floor funny. A few years later, my friend had the video. And I figured I'd watch it for the good old days. I was still on the floors laughing. My opinion, the Plucky and Hampton skit is the best. They decide to go to \"Happy World Land\". And they end up having a crazy adventure to get there. All the skits are funny. I'm still looking for the video. So, if anyone has any tips. Please write me.  This is one of the funniest cartoons I have ever seen. 10/10",
+      "output": "1",
+      "ground_truth": 1
+    },
+    {
+      "text": "The idea ia a very short film with a lot of information. Interesting, entertaining and leaves the viewer wanting more. The producer has produced a short film of excellent quality that cannot be compared to any other short film that I have seen. I have rated this film at the highest possible rating. I also recommend that it is shown to office managers and business people in any establishment. What comes out of it is the fact that people with ideas are never listened to, their voice is never heard. It is a lesson to be learned by any office that wants to go forward. I hope that the produced will produce a second part to this 'idea'. I look forward to viewing the sequence. Once again congrats to Halaqah media in producing a film of excellence and quality with a lesson in mind.",
+      "output": "1",
+      "ground_truth": 1
+    }
+  ],
+  "metrics": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "accuracy": 0.75,
+    "f1": 0.8,
+    "invalid_predictions": 0
+  }
+}

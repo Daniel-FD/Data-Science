@@ -1,8 +1,0 @@
-{
-  "initial_prompt": "You are a sentiment analysis classifier. Determine whether the provided text expresses a positive sentiment about a moview review Respond with '1' if it is positive, or '0' if it is negative. Do NOT answer anything else.",
-  "iterations": 3,
-  "eval_data_shape": [
-    10,
-    2
-  ]
-}

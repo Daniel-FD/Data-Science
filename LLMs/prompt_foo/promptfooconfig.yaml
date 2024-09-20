@@ -1,0 +1,16 @@
+description: "Animal Legs Eval"
+
+prompts:
+  - prompts.py:simple_prompt
+  - prompts.py:better_prompt
+  - prompts.py:chain_of_thought_prompt
+  
+providers:
+  - ollama:llama3.1
+
+tests: animal_legs_tests.csv
+
+defaultTest:
+  options:
+    transform: file://transform.py
+

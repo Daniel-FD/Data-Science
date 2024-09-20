@@ -1,0 +1,9 @@
+{
+  "initial_prompt": "You are a sentiment analysis classifier. Determine whether the provided text expresses a positive sentiment.",
+  "output_format_prompt": "You are to respond strictly in binary format. For each question, reply only with '1' for positive or '0' for negative. Do not include any other text, explanations, or comments.",
+  "iterations": 5,
+  "eval_data_shape": [
+    100,
+    2
+  ]
+}
