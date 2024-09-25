@@ -13,4 +13,3 @@ tests: animal_legs_tests.csv
 defaultTest:
   options:
     transform: file://transform.py
-

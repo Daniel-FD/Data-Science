@@ -1,0 +1,3195 @@
+{
+  "evalId": "eval-2024-09-24T12:06:05",
+  "results": {
+    "version": 2,
+    "timestamp": "2024-09-24T12:06:05.698Z",
+    "results": [
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a human.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a human."
+        },
+        "response": {
+          "output": "2"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 7,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "2"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a human.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a human."
+        },
+        "response": {
+          "output": "2"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 5,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "2"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a human.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a human."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 3,
+        "error": "Expected output \"2\" to equal \"4\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"2\" to equal \"4\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"2\" to equal \"4\"",
+              "assertion": {
+                "type": "equals",
+                "value": "2"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a snake.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a snake."
+        },
+        "response": {
+          "output": "0"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 5,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "0"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a snake.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a snake."
+        },
+        "response": {
+          "output": "0"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 4,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "0"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a snake.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a snake."
+        },
+        "response": {
+          "output": "0"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 4,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "0"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that."
+        },
+        "response": {
+          "output": "Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs."
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 5,
+        "error": "Expected output \"5\" to equal \"Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"5\" to equal \"Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"5\" to equal \"Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.\"",
+              "assertion": {
+                "type": "equals",
+                "value": "5"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 5,
+        "error": "Expected output \"5\" to equal \"4\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"5\" to equal \"4\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"5\" to equal \"4\"",
+              "assertion": {
+                "type": "equals",
+                "value": "5"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that."
+        },
+        "response": {
+          "output": "5"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 3,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "5"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a dog.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a dog."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 4,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a dog.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a dog."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 4,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a dog.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a dog."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 5,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a cat with two extra legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a cat with two extra legs."
+        },
+        "response": {
+          "output": "According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs."
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 1,
+        "error": "Expected output \"6\" to equal \"According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs.\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"6\" to equal \"According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs.\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"6\" to equal \"According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs.\"",
+              "assertion": {
+                "type": "equals",
+                "value": "6"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a cat with two extra legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a cat with two extra legs."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 3,
+        "error": "Expected output \"6\" to equal \"4\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"6\" to equal \"4\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"6\" to equal \"4\"",
+              "assertion": {
+                "type": "equals",
+                "value": "6"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an elephant.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an elephant."
+        },
+        "response": {
+          "output": "Based on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 3,
+        "error": "Expected output \"4\" to equal \"Based on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"4\" to equal \"Based on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"4\" to equal \"Based on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**\"",
+              "assertion": {
+                "type": "equals",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a cat with two extra legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a cat with two extra legs."
+        },
+        "response": {
+          "output": "6"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 3,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "6"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an elephant.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an elephant."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 1,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a bird.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a bird."
+        },
+        "response": {
+          "output": "0"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 1,
+        "error": "Expected output \"2\" to equal \"0\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"2\" to equal \"0\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"2\" to equal \"0\"",
+              "assertion": {
+                "type": "equals",
+                "value": "2"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an elephant.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an elephant."
+        },
+        "response": {
+          "output": "4"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 3,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "4"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a bird.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a bird."
+        },
+        "response": {
+          "output": "Based on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 6,
+        "error": "Expected output \"2\" to equal \"Based on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"2\" to equal \"Based on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"2\" to equal \"Based on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2\"",
+              "assertion": {
+                "type": "equals",
+                "value": "2"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a bird.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a bird."
+        },
+        "response": {
+          "output": "2"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 1,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "2"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a fish.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a fish."
+        },
+        "response": {
+          "output": "0"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 3,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "0"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a fish.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a fish."
+        },
+        "response": {
+          "output": "0"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 4,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "0"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a fish.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a fish."
+        },
+        "response": {
+          "output": "0"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 3,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "0"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a spider with two extra legs'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a spider with two extra legs"
+        },
+        "response": {
+          "output": "A fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 1,
+        "error": "Expected output \"10\" to equal \"A fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"10\" to equal \"A fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"10\" to equal \"A fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!\"",
+              "assertion": {
+                "type": "equals",
+                "value": "10"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a spider with two extra legs'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a spider with two extra legs"
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 2,
+        "error": "Expected output \"10\" to equal \"8\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"10\" to equal \"8\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"10\" to equal \"8\"",
+              "assertion": {
+                "type": "equals",
+                "value": "10"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a spider with two extra legs'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a spider with two extra legs"
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 4,
+        "error": "Expected output \"10\" to equal \"8\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"10\" to equal \"8\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"10\" to equal \"8\"",
+              "assertion": {
+                "type": "equals",
+                "value": "10"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an octopus."
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 2,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "8"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an octopus."
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 1,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "8"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an octopus."
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 2,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "8"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus that lost two legs and then regrew three legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an octopus that lost two legs and then regrew three legs."
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 3,
+        "error": "Expected output \"9\" to equal \"8\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"9\" to equal \"8\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"9\" to equal \"8\"",
+              "assertion": {
+                "type": "equals",
+                "value": "9"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus that lost two legs and then regrew three legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an octopus that lost two legs and then regrew three legs."
+        },
+        "response": {
+          "output": "To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs."
+        },
+        "success": false,
+        "score": 0,
+        "namedScores": {},
+        "latencyMs": 4,
+        "error": "Expected output \"9\" to equal \"To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs.\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output \"9\" to equal \"To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs.\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output \"9\" to equal \"To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs.\"",
+              "assertion": {
+                "type": "equals",
+                "value": "9"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus that lost two legs and then regrew three legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is an octopus that lost two legs and then regrew three legs."
+        },
+        "response": {
+          "output": "9"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 2,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "9"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a two-headed, eight-legged mythical creature.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+          "label": "prompts.py:chain_of_thought_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a two-headed, eight-legged mythical creature."
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 2,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "8"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a two-headed, eight-legged mythical creature.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+          "label": "prompts.py:better_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a two-headed, eight-legged mythical creature."
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 2,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "8"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      },
+      {
+        "provider": {
+          "id": "ollama:completion:llama3.1"
+        },
+        "prompt": {
+          "raw": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a two-headed, eight-legged mythical creature.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+          "label": "prompts.py:simple_prompt"
+        },
+        "vars": {
+          "animal_statement": "The animal is a two-headed, eight-legged mythical creature."
+        },
+        "response": {
+          "output": "8"
+        },
+        "success": true,
+        "score": 1,
+        "namedScores": {},
+        "latencyMs": 3,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "equals",
+                "value": "8"
+              }
+            }
+          ],
+          "assertion": null
+        }
+      }
+    ],
+    "stats": {
+      "successes": 23,
+      "failures": 13,
+      "tokenUsage": {
+        "total": 0,
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0
+      }
+    },
+    "table": {
+      "head": {
+        "prompts": [
+          {
+            "raw": "def simple_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number\"\"\"\n\ndef better_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9\"\"\"\n\ndef chain_of_thought_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.\"\"\"",
+            "label": "prompts.py:simple_prompt",
+            "id": "5ed0fa0f81db83b3831c26371c4e153ac407958cde8d306972fddb5a0460470d",
+            "provider": "ollama:completion:llama3.1",
+            "metrics": {
+              "score": 6,
+              "testPassCount": 6,
+              "testFailCount": 6,
+              "assertPassCount": 6,
+              "assertFailCount": 6,
+              "totalLatencyMs": 44,
+              "tokenUsage": {
+                "total": 0,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 0
+              },
+              "namedScores": {},
+              "namedScoresCount": {},
+              "cost": 0
+            }
+          },
+          {
+            "raw": "def simple_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number\"\"\"\n\ndef better_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9\"\"\"\n\ndef chain_of_thought_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.\"\"\"",
+            "label": "prompts.py:better_prompt",
+            "id": "5ed0fa0f81db83b3831c26371c4e153ac407958cde8d306972fddb5a0460470d",
+            "provider": "ollama:completion:llama3.1",
+            "metrics": {
+              "score": 6,
+              "testPassCount": 6,
+              "testFailCount": 6,
+              "assertPassCount": 6,
+              "assertFailCount": 6,
+              "totalLatencyMs": 32,
+              "tokenUsage": {
+                "total": 0,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 0
+              },
+              "namedScores": {},
+              "namedScoresCount": {},
+              "cost": 0
+            }
+          },
+          {
+            "raw": "def simple_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number\"\"\"\n\ndef better_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9\"\"\"\n\ndef chain_of_thought_prompt(animal_statement):\n    return f\"\"\"You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{animal_statement}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.\"\"\"",
+            "label": "prompts.py:chain_of_thought_prompt",
+            "id": "5ed0fa0f81db83b3831c26371c4e153ac407958cde8d306972fddb5a0460470d",
+            "provider": "ollama:completion:llama3.1",
+            "metrics": {
+              "score": 11,
+              "testPassCount": 11,
+              "testFailCount": 1,
+              "assertPassCount": 11,
+              "assertFailCount": 1,
+              "totalLatencyMs": 38,
+              "tokenUsage": {
+                "total": 0,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 0
+              },
+              "namedScores": {},
+              "namedScoresCount": {},
+              "cost": 0
+            }
+          }
+        ],
+        "vars": [
+          "animal_statement"
+        ]
+      },
+      "body": [
+        {
+          "description": "Row #1",
+          "outputs": [
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "2",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a human.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 7,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "2"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"2\" to equal \"4\"\n---\n4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a human.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"2\" to equal \"4\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"2\" to equal \"4\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "2"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "2",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a human.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 5,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "2"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a human."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "2"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #1",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a human."
+          ]
+        },
+        {
+          "description": "Row #2",
+          "outputs": [
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "0",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a snake.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 5,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "0"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "0",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a snake.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 4,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "0"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "0",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a snake.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 4,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "0"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a snake."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "0"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #2",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a snake."
+          ]
+        },
+        {
+          "description": "Row #3",
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"5\" to equal \"Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.\"\n---\nBased on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 5,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"5\" to equal \"Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"5\" to equal \"Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "5"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"5\" to equal \"4\"\n---\n4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 5,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"5\" to equal \"4\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"5\" to equal \"4\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "5"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "5",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "5"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "5"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #3",
+            "metadata": {}
+          },
+          "vars": [
+            "The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that."
+          ]
+        },
+        {
+          "description": "Row #4",
+          "outputs": [
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a dog.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 4,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "4"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a dog.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 4,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "4"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a dog.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 5,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "4"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a dog."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "4"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #4",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a dog."
+          ]
+        },
+        {
+          "description": "Row #5",
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"6\" to equal \"According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs.\"\n---\nAccording to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs.",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a cat with two extra legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 1,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"6\" to equal \"According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs.\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"6\" to equal \"According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions \"two extra legs\". Therefore, the total number of legs would be:\n\n4 (base legs) + 2 (extra legs) = 6 legs\n\nSo, the animal in question has 6 legs.\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "6"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"6\" to equal \"4\"\n---\n4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a cat with two extra legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"6\" to equal \"4\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"6\" to equal \"4\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "6"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "6",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a cat with two extra legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "6"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a cat with two extra legs."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "6"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #5",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a cat with two extra legs."
+          ]
+        },
+        {
+          "description": "Row #6",
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"4\" to equal \"Based on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**\"\n---\nBased on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an elephant.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"4\" to equal \"Based on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"4\" to equal \"Based on the provided statement, I can infer that the animal is indeed an elephant.\n\nElephants are known to be quadrupeds, which means they walk on four legs when on land.\n\nTherefore, my answer is: **4**\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "4"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an elephant.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 1,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "4"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "4",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an elephant.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "4"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is an elephant."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "4"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #6",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is an elephant."
+          ]
+        },
+        {
+          "description": "Row #7",
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"2\" to equal \"Based on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2\"\n---\nBased on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a bird.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 6,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"2\" to equal \"Based on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"2\" to equal \"Based on the statement, I believe the animal is a bird.\n\nBirds are known to have two legs. Therefore, my answer is:\n\n2\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "2"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"2\" to equal \"0\"\n---\n0",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a bird.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 1,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"2\" to equal \"0\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"2\" to equal \"0\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "2"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "2",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a bird.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 1,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "2"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a bird."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "2"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #7",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a bird."
+          ]
+        },
+        {
+          "description": "Row #8",
+          "outputs": [
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "0",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a fish.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "0"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "0",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a fish.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "0"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "0",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a fish.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 4,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "0"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a fish."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "0"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #8",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a fish."
+          ]
+        },
+        {
+          "description": "Row #9",
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"10\" to equal \"A fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!\"\n---\nA fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a spider with two extra legs'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 1,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"10\" to equal \"A fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"10\" to equal \"A fun task!\n\nAccording to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions \"two extra legs\". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.\n\nSo, 8 (normal legs) + 2 (extra legs) = 10\n\nTherefore, this spider has 10 legs!\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "10"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"10\" to equal \"8\"\n---\n8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a spider with two extra legs'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 2,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"10\" to equal \"8\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"10\" to equal \"8\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "10"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"10\" to equal \"8\"\n---\n8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a spider with two extra legs'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 4,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"10\" to equal \"8\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"10\" to equal \"8\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "10"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a spider with two extra legs"
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "10"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #9",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a spider with two extra legs"
+          ]
+        },
+        {
+          "description": "Row #10",
+          "outputs": [
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 2,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "8"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 1,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "8"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 2,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "8"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is an octopus."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "8"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #10",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is an octopus."
+          ]
+        },
+        {
+          "description": "Row #11",
+          "outputs": [
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"9\" to equal \"To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs.\"\n---\nTo determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs.",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus that lost two legs and then regrew three legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 4,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"9\" to equal \"To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs.\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"9\" to equal \"To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.\n\nAn octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.\nThen, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.\n\nTherefore, the animal has 9 legs.\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "9"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": false,
+              "score": 0,
+              "namedScores": {},
+              "text": "Expected output \"9\" to equal \"8\"\n---\n8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus that lost two legs and then regrew three legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": false,
+                "score": 0,
+                "reason": "Expected output \"9\" to equal \"8\"",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": false,
+                    "score": 0,
+                    "reason": "Expected output \"9\" to equal \"8\"",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "9"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "9",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is an octopus that lost two legs and then regrew three legs.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 2,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "9"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is an octopus that lost two legs and then regrew three legs."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "9"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #11",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is an octopus that lost two legs and then regrew three legs."
+          ]
+        },
+        {
+          "description": "Row #12",
+          "outputs": [
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a two-headed, eight-legged mythical creature.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please respond with a number",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 3,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "8"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a two-headed, eight-legged mythical creature.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? Please only respond with a single digit like 2 or 9",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 2,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "8"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "namedScores": {},
+              "text": "8",
+              "prompt": "You will be provided a statement about an animal and your job is to determine how many legs that animal has.\n    \n    Here is the animal statement.\n    <animal_statement>{'vars': {'animal_statement': 'The animal is a two-headed, eight-legged mythical creature.'}, 'provider': {'id': 'ollama:completion:llama3.1'}}</animal_statement>\n    \n    How many legs does the animal have? \n    Start by reasoning about the numbers of legs the animal has, thinking step by step inside of <thinking> tags.  \n    Then, output your final answer inside of <answer> tags. \n    Inside the <answer> tags return just the number of legs as an integer and nothing else.",
+              "provider": "ollama:completion:llama3.1",
+              "latencyMs": 2,
+              "gradingResult": {
+                "pass": true,
+                "score": 1,
+                "reason": "All assertions passed",
+                "namedScores": {},
+                "tokensUsed": {
+                  "total": 0,
+                  "prompt": 0,
+                  "completion": 0,
+                  "cached": 0
+                },
+                "componentResults": [
+                  {
+                    "pass": true,
+                    "score": 1,
+                    "reason": "Assertion passed",
+                    "assertion": {
+                      "type": "equals",
+                      "value": "8"
+                    }
+                  }
+                ],
+                "assertion": null
+              },
+              "cost": 0
+            }
+          ],
+          "test": {
+            "vars": {
+              "animal_statement": "The animal is a two-headed, eight-legged mythical creature."
+            },
+            "assert": [
+              {
+                "type": "equals",
+                "value": "8"
+              }
+            ],
+            "options": {
+              "transform": "file://transform.py"
+            },
+            "description": "Row #12",
+            "metadata": {}
+          },
+          "vars": [
+            "The animal is a two-headed, eight-legged mythical creature."
+          ]
+        }
+      ]
+    }
+  },
+  "config": {
+    "description": "Animal Legs Eval",
+    "prompts": [
+      "prompts.py:simple_prompt",
+      "prompts.py:better_prompt",
+      "prompts.py:chain_of_thought_prompt"
+    ],
+    "providers": [
+      "ollama:llama3.1"
+    ],
+    "tests": "animal_legs_tests.csv",
+    "sharing": true,
+    "defaultTest": {
+      "options": {
+        "transform": "file://transform.py"
+      }
+    },
+    "outputPath": [
+      "results.json"
+    ],
+    "extensions": []
+  },
+  "shareableUrl": null
+}

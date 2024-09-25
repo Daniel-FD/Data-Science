@@ -1,0 +1,252 @@
+animal_statement,[ollama:completion:llama3.1] prompts.py:simple_prompt,[ollama:completion:llama3.1] prompts.py:better_prompt,[ollama:completion:llama3.1] prompts.py:chain_of_thought_prompt
+The animal is a human.,"[PASS] (1.00)
+
+2
+
+Pass Reason: All assertions passed","[FAIL] (0.00)
+
+Expected output ""2"" to equal ""4""
+---
+4
+
+Fail Reason: Expected output ""2"" to equal ""4""","[PASS] (1.00)
+
+2
+
+Pass Reason: All assertions passed"
+The animal is a snake.,"[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed"
+"The fox lost a leg, but then magically grew back the leg he lost and a mysterious extra leg on top of that.","[FAIL] (0.00)
+
+Expected output ""5"" to equal ""Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.""
+---
+Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.
+
+Fail Reason: Expected output ""5"" to equal ""Based on the statement, it appears that the fox initially had 4 legs (a typical number for a quadruped like a fox), but then gained an additional leg, making a total of 5 legs. Therefore, I conclude that the fox has 5 legs.""","[FAIL] (0.00)
+
+Expected output ""5"" to equal ""4""
+---
+4
+
+Fail Reason: Expected output ""5"" to equal ""4""","[PASS] (1.00)
+
+5
+
+Pass Reason: All assertions passed"
+The animal is a dog.,"[PASS] (1.00)
+
+4
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+4
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+4
+
+Pass Reason: All assertions passed"
+The animal is a cat with two extra legs.,"[FAIL] (0.00)
+
+Expected output ""6"" to equal ""According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions ""two extra legs"". Therefore, the total number of legs would be:
+
+4 (base legs) + 2 (extra legs) = 6 legs
+
+So, the animal in question has 6 legs.""
+---
+According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions ""two extra legs"". Therefore, the total number of legs would be:
+
+4 (base legs) + 2 (extra legs) = 6 legs
+
+So, the animal in question has 6 legs.
+
+Fail Reason: Expected output ""6"" to equal ""According to the statement, the base assumption about a cat is that it has 4 legs (the typical number of legs for a feline), and then it mentions ""two extra legs"". Therefore, the total number of legs would be:
+
+4 (base legs) + 2 (extra legs) = 6 legs
+
+So, the animal in question has 6 legs.""","[FAIL] (0.00)
+
+Expected output ""6"" to equal ""4""
+---
+4
+
+Fail Reason: Expected output ""6"" to equal ""4""","[PASS] (1.00)
+
+6
+
+Pass Reason: All assertions passed"
+The animal is an elephant.,"[FAIL] (0.00)
+
+Expected output ""4"" to equal ""Based on the provided statement, I can infer that the animal is indeed an elephant.
+
+Elephants are known to be quadrupeds, which means they walk on four legs when on land.
+
+Therefore, my answer is: **4**""
+---
+Based on the provided statement, I can infer that the animal is indeed an elephant.
+
+Elephants are known to be quadrupeds, which means they walk on four legs when on land.
+
+Therefore, my answer is: **4**
+
+Fail Reason: Expected output ""4"" to equal ""Based on the provided statement, I can infer that the animal is indeed an elephant.
+
+Elephants are known to be quadrupeds, which means they walk on four legs when on land.
+
+Therefore, my answer is: **4**""","[PASS] (1.00)
+
+4
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+4
+
+Pass Reason: All assertions passed"
+The animal is a bird.,"[FAIL] (0.00)
+
+Expected output ""2"" to equal ""Based on the statement, I believe the animal is a bird.
+
+Birds are known to have two legs. Therefore, my answer is:
+
+2""
+---
+Based on the statement, I believe the animal is a bird.
+
+Birds are known to have two legs. Therefore, my answer is:
+
+2
+
+Fail Reason: Expected output ""2"" to equal ""Based on the statement, I believe the animal is a bird.
+
+Birds are known to have two legs. Therefore, my answer is:
+
+2""","[FAIL] (0.00)
+
+Expected output ""2"" to equal ""0""
+---
+0
+
+Fail Reason: Expected output ""2"" to equal ""0""","[PASS] (1.00)
+
+2
+
+Pass Reason: All assertions passed"
+The animal is a fish.,"[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+0
+
+Pass Reason: All assertions passed"
+The animal is a spider with two extra legs,"[FAIL] (0.00)
+
+Expected output ""10"" to equal ""A fun task!
+
+According to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions ""two extra legs"". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.
+
+So, 8 (normal legs) + 2 (extra legs) = 10
+
+Therefore, this spider has 10 legs!""
+---
+A fun task!
+
+According to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions ""two extra legs"". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.
+
+So, 8 (normal legs) + 2 (extra legs) = 10
+
+Therefore, this spider has 10 legs!
+
+Fail Reason: Expected output ""10"" to equal ""A fun task!
+
+According to the statement, the animal is a spider, and spiders normally have 8 legs. However, it also mentions ""two extra legs"". To find out how many legs this spider has in total, I'll add the extra legs to its normal number of legs.
+
+So, 8 (normal legs) + 2 (extra legs) = 10
+
+Therefore, this spider has 10 legs!""","[FAIL] (0.00)
+
+Expected output ""10"" to equal ""8""
+---
+8
+
+Fail Reason: Expected output ""10"" to equal ""8""","[FAIL] (0.00)
+
+Expected output ""10"" to equal ""8""
+---
+8
+
+Fail Reason: Expected output ""10"" to equal ""8"""
+The animal is an octopus.,"[PASS] (1.00)
+
+8
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+8
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+8
+
+Pass Reason: All assertions passed"
+The animal is an octopus that lost two legs and then regrew three legs.,"[FAIL] (0.00)
+
+Expected output ""9"" to equal ""To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.
+
+An octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.
+Then, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.
+
+Therefore, the animal has 9 legs.""
+---
+To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.
+
+An octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.
+Then, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.
+
+Therefore, the animal has 9 legs.
+
+Fail Reason: Expected output ""9"" to equal ""To determine how many legs the octopus has, we need to subtract the number of legs lost from its original number and then add the number of new legs regrown.
+
+An octopus originally has 8 legs. It lost 2 legs, so it had 8 - 2 = 6 legs remaining.
+Then, it regrew 3 new legs, so it now has 6 + 3 = 9 legs.
+
+Therefore, the animal has 9 legs.""","[FAIL] (0.00)
+
+Expected output ""9"" to equal ""8""
+---
+8
+
+Fail Reason: Expected output ""9"" to equal ""8""","[PASS] (1.00)
+
+9
+
+Pass Reason: All assertions passed"
+"The animal is a two-headed, eight-legged mythical creature.","[PASS] (1.00)
+
+8
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+8
+
+Pass Reason: All assertions passed","[PASS] (1.00)
+
+8
+
+Pass Reason: All assertions passed"
