@@ -1,4 +1,5 @@
 import os
+import re
 import json
 from datetime import datetime
 import tiktoken
@@ -143,8 +144,10 @@ def log_prompt_generation(log_dir: str, iteration: int, initial_prompt: str, ana
 def display_best_prompt(best_prompt: str, output_format_prompt: str):
     """Display the best performing prompt."""
     console = Console()
-    console.print("\n[bold]Best prompt based on F1-score:[/bold]")
-    console.print(Panel(best_prompt + "\n\n" + output_format_prompt, expand=False))
+    console.print(Panel.fit("[bold green]Best Prompt:[/bold green]"))
+    console.print(best_prompt)
+    console.print(Panel.fit("[bold green]Output Format:[/bold green]"))
+    console.print(output_format_prompt)
 
 def display_comparison_table(all_metrics: list):
     """Display a comparison table of metrics for all iterations."""
@@ -285,3 +288,84 @@ def update_best_metrics(best_metrics: dict, best_prompt: str, results: dict, cur
     if best_metrics is None or results['f1'] > best_metrics['f1']:
         return results, current_prompt
     return best_metrics, best_prompt
+
+def transform_and_compare_output(raw_output, label, output_schema):
+    """
+    Transform the raw output according to the provided schema and compare with the label.
+
+    Args:
+        raw_output (str): The raw output from the model
+        label (int): The true label from eval_data
+        output_schema (dict): A schema defining how to transform the output
+
+    Returns:
+        tuple: (transformed_output, is_correct, is_valid)
+    """
+    key_to_extract = output_schema.get('key_to_extract')
+    value_mapping = output_schema.get('value_mapping')
+    regex_pattern = output_schema.get('regex_pattern')
+
+    if key_to_extract:
+        # Original case: extract from JSON or use regex for specific key
+        json_match = re.search(r'\{[^}]+\}', raw_output)
+        if json_match:
+            try:
+                parsed_output = json.loads(json_match.group())
+                extracted_value = parsed_output.get(key_to_extract)
+            except json.JSONDecodeError:
+                print(f"JSON Decode Error: Unable to parse extracted JSON")
+                return None, False, False
+        else:
+            # If JSON parsing fails, try to find the value directly
+            value_match = re.search(regex_pattern, raw_output)
+            if value_match:
+                extracted_value = value_match.group(1)
+            else:
+                print(f"Unable to find {key_to_extract} in the raw output")
+                return None, False, False
+    else:
+        # New case: direct binary classification
+        value_match = re.search(regex_pattern, raw_output.strip())
+        if value_match:
+            extracted_value = value_match.group(1)
+        else:
+            print(f"Unable to match the output pattern: {regex_pattern}")
+            return None, False, False
+
+    if value_mapping:
+        # Use value mapping if provided
+        normalized_value = extracted_value.lower().replace(" ", "_")
+        transformed_output = value_mapping.get(normalized_value)
+    else:
+        # Direct mapping for binary classification
+        try:
+            transformed_output = int(extracted_value)
+        except ValueError:
+            print(f"Invalid output: Unable to convert '{extracted_value}' to int")
+            return None, False, False
+
+    if transformed_output is not None:
+        is_correct = (transformed_output == label)
+        return transformed_output, is_correct, True
+    else:
+        print(f"Invalid output: Extracted value '{extracted_value}' not found in value_mapping")
+        return None, False, False
+
+def log_evaluation_results(log_dir: str, iteration: int, results: dict, eval_data):
+    """Log the evaluation results for a specific iteration."""
+    log_file_path = os.path.join(log_dir, f"iteration_{iteration}_evaluation.json")
+    log_data = {
+        "iteration": iteration,
+        "metrics": {
+            "precision": results['precision'],
+            "recall": results['recall'],
+            "accuracy": results['accuracy'],
+            "f1": results['f1'],
+            "invalid_predictions": results['invalid_predictions']
+        },
+        "false_positives": [fp['text'] for fp in results['false_positives']],
+        "false_negatives": [fn['text'] for fn in results['false_negatives']],
+        "eval_data_shape": eval_data.shape
+    }
+    with open(log_file_path, 'w') as f:
+        json.dump(log_data, f, indent=2)

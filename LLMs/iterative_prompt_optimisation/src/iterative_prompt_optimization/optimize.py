@@ -1,3 +1,4 @@
+import pandas as pd 
 from .evaluation import evaluate_prompt
 from .prompt_generation import generate_new_prompt
 from .utils import (estimate_token_usage, estimate_cost, display_best_prompt,
@@ -6,8 +7,10 @@ from .utils import (estimate_token_usage, estimate_cost, display_best_prompt,
                     create_metric_entry, update_best_metrics)
 from . import config
 
-def optimize_prompt(initial_prompt: str, output_format_prompt: str, eval_data, iterations: int = 5, 
-                    model_provider: str = None, model_name: str = None):
+def optimize_prompt(initial_prompt: str, output_format_prompt: str, eval_data: pd.DataFrame, iterations: int,
+                    eval_provider: str = None, eval_model: str = None,
+                    optim_provider: str = None, optim_model: str = None,
+                    output_schema: dict = None) -> tuple:
     """
     Optimize a prompt through iterative refinement and evaluation.
 
@@ -20,31 +23,37 @@ def optimize_prompt(initial_prompt: str, output_format_prompt: str, eval_data, i
     Args:
         initial_prompt (str): The starting prompt to be optimized
         output_format_prompt (str): Instructions for the desired output format
-        eval_data: Dataset used for evaluating prompt performance
+        eval_data (pd.DataFrame): Dataset used for evaluating prompt performance
         iterations (int): Number of optimization iterations to perform
-        model_provider (str, optional): The AI model provider (e.g., "openai", "anthropic")
-        model_name (str, optional): The specific model to use
+        eval_provider (str, optional): Provider for the evaluation model
+        eval_model (str, optional): Name of the evaluation model
+        optim_provider (str, optional): Provider for the optimization model
+        optim_model (str, optional): Name of the optimization model
+        output_schema (dict, optional): Schema for transforming and comparing output
 
     Returns:
         tuple: The best performing prompt and its associated metrics
-
-    Note:
-        If model_provider or model_name is not provided, the function will prompt the user to select them.
     """
-    # Select model if not provided
-    if model_provider is None or model_name is None:
-        SELECTED_PROVIDER, MODEL_NAME = select_model()
-    else:
-        SELECTED_PROVIDER, MODEL_NAME = model_provider, model_name
+    # Select models for evaluation and optimization if not provided
+    if not eval_provider or not eval_model:
+        eval_provider, eval_model = select_model("evaluation")
+    if not optim_provider or not optim_model:
+        optim_provider, optim_model = select_model("optimization")
     
-    # Set the selected model in the config
-    config.set_model(SELECTED_PROVIDER, MODEL_NAME)
-    print(f"Selected provider: {SELECTED_PROVIDER}")
-    print(f"Selected model: {MODEL_NAME}")
+    config.set_models(eval_provider, eval_model, optim_provider, optim_model)
+
+    # Get the selected models from config
+    eval_provider, eval_model = config.get_eval_model()
+    optim_provider, optim_model = config.get_optim_model()
+
+    print(f"Selected evaluation provider: {eval_provider}")
+    print(f"Selected evaluation model: {eval_model}")
+    print(f"Selected optimization provider: {optim_provider}")
+    print(f"Selected optimization model: {optim_model}")
 
     # Estimate token usage and cost
     total_tokens = estimate_token_usage(initial_prompt, output_format_prompt, eval_data, iterations)
-    estimated_cost = estimate_cost(total_tokens, SELECTED_PROVIDER, MODEL_NAME)
+    estimated_cost = estimate_cost(total_tokens, eval_provider, eval_model)
     
     print(f"Estimated token usage: {total_tokens}")
     print(f"Estimated cost: {estimated_cost}")
@@ -54,7 +63,7 @@ def optimize_prompt(initial_prompt: str, output_format_prompt: str, eval_data, i
     proceed = input().strip().lower()
     if proceed != 'y':
         print("Optimization cancelled.")
-        return
+        return None, None
 
     best_metrics = None
     best_prompt = initial_prompt
@@ -67,12 +76,23 @@ def optimize_prompt(initial_prompt: str, output_format_prompt: str, eval_data, i
     # Log initial setup
     log_initial_setup(log_dir, initial_prompt, output_format_prompt, iterations, eval_data)
     
+    # Define a default output schema if none is provided
+    if output_schema is None:
+        output_schema = {
+            'key_to_extract': 'risk_output',
+            'value_mapping': {
+                'risk present': 1,
+                'risk not present': 0
+            },
+            'regex_pattern': r"'risk_output':\s*'(.*?)'"
+        }
+
     # Main optimization loop
     for i in range(iterations):
         print(f"\nIteration {i+1}/{iterations}")
         
         # Evaluate the current prompt
-        results = evaluate_prompt(current_prompt, output_format_prompt, eval_data, log_dir=log_dir, iteration=i+1)
+        results = evaluate_prompt(current_prompt, output_format_prompt, eval_data, output_schema, log_dir=log_dir, iteration=i+1)
         
         # Display and log the results
         display_metrics(results, i+1)
@@ -99,5 +119,30 @@ def optimize_prompt(initial_prompt: str, output_format_prompt: str, eval_data, i
 
     return best_prompt, best_metrics
 
-# Note: Any global calls to select_model() or other functions that might run on import have been removed
-# to prevent unexpected behavior when importing this module.
+def select_model(purpose: str) -> tuple:
+    """
+    Interactively select a model provider and specific model.
+
+    Args:
+        purpose (str): The purpose of model selection (e.g., "evaluation" or "optimization")
+
+    Returns:
+        tuple: Selected provider and model name
+    """
+    print(f"\nSelect a model provider for {purpose}:")
+    providers = list(config.MODEL_OPTIONS.keys())
+    for i, provider in enumerate(providers):
+        print(f"{i+1}. {provider}")
+    
+    provider_choice = int(input("Enter the number of your choice: ")) - 1
+    selected_provider = providers[provider_choice]
+    
+    print(f"\nSelect a model from {selected_provider} for {purpose}:")
+    models = config.MODEL_OPTIONS[selected_provider]
+    for i, model in enumerate(models):
+        print(f"{i+1}. {model}")
+    
+    model_choice = int(input("Enter the number of your choice: ")) - 1
+    selected_model = models[model_choice]
+    
+    return selected_provider, selected_model

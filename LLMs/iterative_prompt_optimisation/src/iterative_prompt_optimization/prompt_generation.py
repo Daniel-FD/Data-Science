@@ -1,7 +1,7 @@
 from .model_interface import get_analysis
 from .utils import display_analysis, log_prompt_generation
 
-def generate_new_prompt(initial_prompt: str, output_format_prompt: str, false_positives: list, false_negatives: list, log_dir: str = None, iteration: int = None):
+def generate_new_prompt(initial_prompt: str, output_format_prompt: str, false_positives: list, false_negatives: list, log_dir: str = None, iteration: int = None) -> str:
     """
     Generate a new prompt based on the analysis of misclassifications.
 
@@ -61,7 +61,7 @@ def _create_analysis_prompt(fp_texts: str, fn_texts: str) -> str:
     Based on your analysis, suggest strategies to improve the classification prompt, focusing on how it can better recognize the nuances that led to the errors. Your recommendations should include ways to reduce both false positives and false negatives by making the prompt more sensitive to subtle differences in the classification of text.
     """
 
-def generate_improved_prompt(initial_prompt: str, analysis: str):
+def generate_improved_prompt(initial_prompt: str, analysis: str) -> str:
     """
     Generate an improved prompt based on the analysis.
 

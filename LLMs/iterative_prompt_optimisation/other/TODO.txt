@@ -1,3 +1,6 @@
+- Allow to pass the variable that wants to be optimised (e.g. f1 score, recall)
+- Include the metrics of the previous prompt into the prompt optimisation step
+
 1. add extract_answer function to optimize_prompt.py, to allow output the reasoning of the model as well as the answer
 
     import re
@@ -20,3 +23,4 @@
 4. Allow for different output formats. Think about EHU - risk_output = "present" or risk_output = "not present" is what we are evaluating against.
 
 5. Estimate number of tokens before starting the experiment - so we know the estimation costs. Ask to proceed when printing the cost?
+

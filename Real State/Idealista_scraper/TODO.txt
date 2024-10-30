@@ -1,0 +1,19 @@
+I want to scape all the properties in A Coruña for establishment (local comercial)
+City: A Coruña [Madrid, Barcelona, Valencia, Sevilla, ...]
+Type of property: Local comercial [House, Apartment, Parking, Storeroom, ...]
+Operation: Sale [Rent]
+Sample URL:https://www.idealista.com/venta-locales/a-coruna-a-coruna/
+
+I want to create a function that takes the city, type of property and operation as input and returns the URL of the search results page.
+I want to extact all the properties in ALL the search results pages and return a dataframe with all the availible information, inlcuding:
+- Property type
+- Price
+- Area
+- Description
+- URL
+
+Store the dataframe in a CSV file.
+Allow to update the dataframe if the scraper is run again.
+
+After the scrapper is completed and the dataframe is stored, I want to plot the price per square meter of the properties in a scatter plot.
+I want to plot in a geographic map the price per square meter of the properties.
