@@ -15,7 +15,7 @@ def main():
     
     # Set search parameters
     city = "a-coruna-a-coruna"
-    property_type = "locales"
+    property_type = "local-comercial"
     operation = "venta"
     
     # Generate search URL
