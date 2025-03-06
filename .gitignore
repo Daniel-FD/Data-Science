@@ -11,3 +11,9 @@ Medical/Aorta_Segmentation/data/.DS_Store
 /Medical/Aorta_Segmentation/src/postprocessing/__pycache__
 /Medical/Aorta_Segmentation/src/preprocessing/__pycache__
 Medical/Aorta_Segmentation/data/output/.DS_Store
+Interview/.DS_Store
+*.DS_Store
+/Interview/Range/__pycache__
+Interview/Range/assignment/raw_data/transfers.jsonl
+Interview/Range/data/raw_data/transfers.jsonl
+.DS_Store
