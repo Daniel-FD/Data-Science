@@ -1,4 +1,3 @@
-
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
@@ -17,3 +16,5 @@ Interview/.DS_Store
 Interview/Range/assignment/raw_data/transfers.jsonl
 Interview/Range/data/raw_data/transfers.jsonl
 .DS_Store
+# Environment variables
+Climate/APIs/.env
