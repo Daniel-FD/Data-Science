@@ -22,3 +22,7 @@ Climate/APIs/.env
 /Finance/Cost_of_Living_Comparison/frontend/node_modules
 /Finance/Cost_of_Living_Comparison/backend/models/__pycache__
 /Finance/Cost_of_Living_Comparison/backend/services/__pycache__
+/Finance/SL_vs_Autonomo/backend/scenarios/__pycache__
+/Finance/SL_vs_Autonomo/backend/tax_engine/__pycache__
+/Finance/SL_vs_Autonomo/backend/__pycache__
+/Finance/SL_vs_Autonomo/backend/api/__pycache__
