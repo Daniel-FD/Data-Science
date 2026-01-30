@@ -1,0 +1,20 @@
+{
+  "nav.simulator": "Simulator",
+  "nav.how": "How It Works",
+  "nav.glossary": "Glossary",
+  "nav.language": "Language",
+  "app.title": "Fiscal Simulator",
+  "sidebar.title": "Parameters",
+  "sidebar.region": "Region",
+  "sidebar.presets": "Quick profiles",
+  "sidebar.income": "Income",
+  "sidebar.company": "Company (LLC)",
+  "sidebar.investment": "Investment",
+  "sidebar.horizon": "Horizon",
+  "sidebar.simulate": "Simulate",
+  "results.best": "Best option",
+  "results.monthly": "Net monthly income",
+  "results.compare": "Comparison",
+  "results.details": "Year-by-year detail",
+  "disclaimer": "Indicative simulator. Consult a professional tax advisor. Tax data updated to Jan 2025."
+}

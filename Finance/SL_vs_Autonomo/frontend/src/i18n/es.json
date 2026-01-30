@@ -1,0 +1,20 @@
+{
+  "nav.simulator": "Simulador",
+  "nav.how": "Cómo Funciona",
+  "nav.glossary": "Glosario",
+  "nav.language": "Idioma",
+  "app.title": "Simulador Fiscal",
+  "sidebar.title": "Parámetros",
+  "sidebar.region": "Comunidad Autónoma",
+  "sidebar.presets": "Perfiles rápidos",
+  "sidebar.income": "Ingresos",
+  "sidebar.company": "Empresa (SL)",
+  "sidebar.investment": "Inversión",
+  "sidebar.horizon": "Horizonte",
+  "sidebar.simulate": "Simular",
+  "results.best": "Mejor opción",
+  "results.monthly": "Renta mensual neta",
+  "results.compare": "Comparativa",
+  "results.details": "Detalle año a año",
+  "disclaimer": "Simulador orientativo. Consulta con un asesor fiscal profesional. Datos fiscales actualizados a enero 2025."
+}

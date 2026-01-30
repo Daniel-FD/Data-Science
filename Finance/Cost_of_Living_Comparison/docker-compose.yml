@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: cost-of-living-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - NUMBEO_API_KEY=${NUMBEO_API_KEY}
+      - FX_API_KEY=${FX_API_KEY}
+      - DEBUG=True
+    volumes:
+      - ./backend:/app
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: cost-of-living-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend_data:

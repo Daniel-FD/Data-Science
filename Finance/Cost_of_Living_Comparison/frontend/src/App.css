@@ -1,0 +1,169 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.main-card {
+  background: var(--surface);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.controls {
+  background: linear-gradient(to right, #f8fafc, #f1f5f9);
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mode-selector {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.mode-btn {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.mode-btn:hover {
+  border-color: var(--primary-light);
+  transform: translateY(0);
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.view-selector {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.view-btn {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.view-btn:hover {
+  background: var(--background);
+  transform: translateY(0);
+}
+
+.view-btn.active {
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.results-section {
+  padding: 2rem;
+  min-height: 400px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.no-results svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  opacity: 0.3;
+}
+
+.no-results h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem 0.5rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .controls {
+    padding: 1.5rem;
+  }
+
+  .mode-selector {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mode-btn {
+    max-width: 100%;
+  }
+
+  .results-section {
+    padding: 1.5rem;
+  }
+}
