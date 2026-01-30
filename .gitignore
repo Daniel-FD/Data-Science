@@ -18,3 +18,7 @@ Interview/Range/data/raw_data/transfers.jsonl
 .DS_Store
 # Environment variables
 Climate/APIs/.env
+/Finance/Cost_of_Living_Comparison/backend/venv
+/Finance/Cost_of_Living_Comparison/frontend/node_modules
+/Finance/Cost_of_Living_Comparison/backend/models/__pycache__
+/Finance/Cost_of_Living_Comparison/backend/services/__pycache__

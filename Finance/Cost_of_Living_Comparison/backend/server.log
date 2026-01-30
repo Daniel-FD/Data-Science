@@ -1,0 +1,222 @@
+INFO:services.data_loader:Loading dataset from /Users/danielfiuzadosil/Documents/GitHub/Data-Science/Finance/Cost_of_Living_Comparison/backend/data/cost-of-living.csv
+INFO:services.data_loader:Loaded 93 cities from dataset
+INFO:services.numbeo_service:Using Kaggle dataset with 93 cities
+INFO:     Started server process [35189]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:64531 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65422 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65424 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65438 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65438 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65450 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65452 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65452 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65450 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65466 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65487 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:__main__:Basic conversion: 50000.0 EUR from Madrid, Spain
+INFO:     127.0.0.1:65491 - "GET /api/convert_basic?salary=50000&source_city=Madrid,+Spain&currency=EUR HTTP/1.1" 200 OK
+INFO:__main__:Basic conversion: 80000.0 USD from New York, United States
+INFO:services.numbeo_service:Cache hit for New York, United States
+INFO:services.numbeo_service:Cache hit for Abu Dhabi, United Arab Emirates
+INFO:services.numbeo_service:Cache hit for Amsterdam, Netherlands
+INFO:services.numbeo_service:Cache hit for Athens, Greece
+INFO:services.numbeo_service:Cache hit for Auckland, New Zealand
+INFO:services.numbeo_service:Cache hit for Bangalore, India
+INFO:services.numbeo_service:Cache hit for Bangkok, Thailand
+INFO:services.numbeo_service:Cache hit for Barcelona, Spain
+INFO:services.numbeo_service:Cache hit for Beijing, China
+INFO:services.numbeo_service:Cache hit for Berlin, Germany
+INFO:services.numbeo_service:Cache hit for Bogota, Colombia
+INFO:services.numbeo_service:Cache hit for Boston, United States
+INFO:services.numbeo_service:Cache hit for Brisbane, Australia
+INFO:services.numbeo_service:Cache hit for Brussels, Belgium
+INFO:services.numbeo_service:Cache hit for Bucharest, Romania
+INFO:services.numbeo_service:Cache hit for Budapest, Hungary
+INFO:services.numbeo_service:Cache hit for Buenos Aires, Argentina
+INFO:services.numbeo_service:Cache hit for Cairo, Egypt
+INFO:services.numbeo_service:Cache hit for Cape Town, South Africa
+INFO:services.numbeo_service:Cache hit for Chennai, India
+INFO:services.numbeo_service:Cache hit for Chicago, United States
+INFO:services.numbeo_service:Cache hit for Copenhagen, Denmark
+INFO:services.numbeo_service:Cache hit for Delhi, India
+INFO:services.numbeo_service:Cache hit for Dhaka, Bangladesh
+INFO:services.numbeo_service:Cache hit for Doha, Qatar
+INFO:services.numbeo_service:Cache hit for Dubai, United Arab Emirates
+INFO:services.numbeo_service:Cache hit for Dublin, Ireland
+INFO:services.numbeo_service:Cache hit for Edinburgh, United Kingdom
+INFO:services.numbeo_service:Cache hit for Glasgow, United Kingdom
+INFO:services.numbeo_service:Cache hit for Guangzhou, China
+INFO:services.numbeo_service:Cache hit for Guatemala City, Guatemala
+INFO:services.numbeo_service:Cache hit for Hanoi, Vietnam
+INFO:services.numbeo_service:Cache hit for Helsinki, Finland
+INFO:services.numbeo_service:Cache hit for Ho Chi Minh, Vietnam
+INFO:services.numbeo_service:Cache hit for Hong Kong, Hong Kong
+INFO:services.numbeo_service:Cache hit for Hyderabad, India
+INFO:services.numbeo_service:Cache hit for Istanbul, Turkey
+INFO:services.numbeo_service:Cache hit for Jakarta, Indonesia
+INFO:services.numbeo_service:Cache hit for Johannesburg, South Africa
+INFO:services.numbeo_service:Cache hit for Karachi, Pakistan
+INFO:services.numbeo_service:Cache hit for Kiev, Ukraine
+INFO:services.numbeo_service:Cache hit for Kuala Lumpur, Malaysia
+INFO:services.numbeo_service:Cache hit for Kuwait City, Kuwait
+INFO:services.numbeo_service:Cache hit for Kyoto, Japan
+INFO:services.numbeo_service:Cache hit for Lagos, Nigeria
+INFO:services.numbeo_service:Cache hit for Lahore, Pakistan
+INFO:services.numbeo_service:Cache hit for Lima, Peru
+INFO:services.numbeo_service:Cache hit for Lisbon, Portugal
+INFO:services.numbeo_service:Cache hit for London, United Kingdom
+INFO:services.numbeo_service:Cache hit for Los Angeles, United States
+INFO:services.numbeo_service:Cache hit for Madrid, Spain
+INFO:services.numbeo_service:Cache hit for Manchester, United Kingdom
+INFO:services.numbeo_service:Cache hit for Manila, Philippines
+INFO:services.numbeo_service:Cache hit for Melbourne, Australia
+INFO:services.numbeo_service:Cache hit for Mexico City, Mexico
+INFO:services.numbeo_service:Cache hit for Miami, United States
+INFO:services.numbeo_service:Cache hit for Milan, Italy
+INFO:services.numbeo_service:Cache hit for Montevideo, Uruguay
+INFO:services.numbeo_service:Cache hit for Montreal, Canada
+INFO:services.numbeo_service:Cache hit for Moscow, Russia
+INFO:services.numbeo_service:Cache hit for Mumbai, India
+INFO:services.numbeo_service:Cache hit for Nairobi, Kenya
+INFO:services.numbeo_service:Cache hit for Osaka, Japan
+INFO:services.numbeo_service:Cache hit for Oslo, Norway
+INFO:services.numbeo_service:Cache hit for Panama City, Panama
+INFO:services.numbeo_service:Cache hit for Paris, France
+INFO:services.numbeo_service:Cache hit for Perth, Australia
+INFO:services.numbeo_service:Cache hit for Prague, Czech Republic
+INFO:services.numbeo_service:Cache hit for Quito, Ecuador
+INFO:services.numbeo_service:Cache hit for Rio de Janeiro, Brazil
+INFO:services.numbeo_service:Cache hit for Riyadh, Saudi Arabia
+INFO:services.numbeo_service:Cache hit for Rome, Italy
+INFO:services.numbeo_service:Cache hit for San Francisco, United States
+INFO:services.numbeo_service:Cache hit for San Jose, Costa Rica
+INFO:services.numbeo_service:Cache hit for Santiago, Chile
+INFO:services.numbeo_service:Cache hit for Sao Paulo, Brazil
+INFO:services.numbeo_service:Cache hit for Seattle, United States
+INFO:services.numbeo_service:Cache hit for Seoul, South Korea
+INFO:services.numbeo_service:Cache hit for Shanghai, China
+INFO:services.numbeo_service:Cache hit for Shenzhen, China
+INFO:services.numbeo_service:Cache hit for Singapore, Singapore
+INFO:services.numbeo_service:Cache hit for St Petersburg, Russia
+INFO:services.numbeo_service:Cache hit for Stockholm, Sweden
+INFO:services.numbeo_service:Cache hit for Sydney, Australia
+INFO:services.numbeo_service:Cache hit for Taipei, Taiwan
+INFO:services.numbeo_service:Cache hit for Tel Aviv, Israel
+INFO:services.numbeo_service:Cache hit for Tokyo, Japan
+INFO:services.numbeo_service:Cache hit for Toronto, Canada
+INFO:services.numbeo_service:Cache hit for Vancouver, Canada
+INFO:services.numbeo_service:Cache hit for Vienna, Austria
+INFO:services.numbeo_service:Cache hit for Warsaw, Poland
+INFO:services.numbeo_service:Cache hit for Washington DC, United States
+INFO:services.numbeo_service:Cache hit for Wellington, New Zealand
+INFO:     127.0.0.1:49251 - "GET /api/convert_basic?salary=80000&source_city=New%20York%2C%20United%20States&currency=USD HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49275 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49275 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49438 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49440 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49456 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49456 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49486 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49486 - "GET /api/cities HTTP/1.1" 200 OK
+INFO:__main__:Basic conversion: 100000.0 EUR from London, United Kingdom
+INFO:services.numbeo_service:Cache hit for London, United Kingdom
+INFO:services.numbeo_service:Cache hit for Abu Dhabi, United Arab Emirates
+INFO:services.numbeo_service:Cache hit for Amsterdam, Netherlands
+INFO:services.numbeo_service:Cache hit for Athens, Greece
+INFO:services.numbeo_service:Cache hit for Auckland, New Zealand
+INFO:services.numbeo_service:Cache hit for Bangalore, India
+INFO:services.numbeo_service:Cache hit for Bangkok, Thailand
+INFO:services.numbeo_service:Cache hit for Barcelona, Spain
+INFO:services.numbeo_service:Cache hit for Beijing, China
+INFO:services.numbeo_service:Cache hit for Berlin, Germany
+INFO:services.numbeo_service:Cache hit for Bogota, Colombia
+INFO:services.numbeo_service:Cache hit for Boston, United States
+INFO:services.numbeo_service:Cache hit for Brisbane, Australia
+INFO:services.numbeo_service:Cache hit for Brussels, Belgium
+INFO:services.numbeo_service:Cache hit for Bucharest, Romania
+INFO:services.numbeo_service:Cache hit for Budapest, Hungary
+INFO:services.numbeo_service:Cache hit for Buenos Aires, Argentina
+INFO:services.numbeo_service:Cache hit for Cairo, Egypt
+INFO:services.numbeo_service:Cache hit for Cape Town, South Africa
+INFO:services.numbeo_service:Cache hit for Chennai, India
+INFO:services.numbeo_service:Cache hit for Chicago, United States
+INFO:services.numbeo_service:Cache hit for Copenhagen, Denmark
+INFO:services.numbeo_service:Cache hit for Delhi, India
+INFO:services.numbeo_service:Cache hit for Dhaka, Bangladesh
+INFO:services.numbeo_service:Cache hit for Doha, Qatar
+INFO:services.numbeo_service:Cache hit for Dubai, United Arab Emirates
+INFO:services.numbeo_service:Cache hit for Dublin, Ireland
+INFO:services.numbeo_service:Cache hit for Edinburgh, United Kingdom
+INFO:services.numbeo_service:Cache hit for Glasgow, United Kingdom
+INFO:services.numbeo_service:Cache hit for Guangzhou, China
+INFO:services.numbeo_service:Cache hit for Guatemala City, Guatemala
+INFO:services.numbeo_service:Cache hit for Hanoi, Vietnam
+INFO:services.numbeo_service:Cache hit for Helsinki, Finland
+INFO:services.numbeo_service:Cache hit for Ho Chi Minh, Vietnam
+INFO:services.numbeo_service:Cache hit for Hong Kong, Hong Kong
+INFO:services.numbeo_service:Cache hit for Hyderabad, India
+INFO:services.numbeo_service:Cache hit for Istanbul, Turkey
+INFO:services.numbeo_service:Cache hit for Jakarta, Indonesia
+INFO:services.numbeo_service:Cache hit for Johannesburg, South Africa
+INFO:services.numbeo_service:Cache hit for Karachi, Pakistan
+INFO:services.numbeo_service:Cache hit for Kiev, Ukraine
+INFO:services.numbeo_service:Cache hit for Kuala Lumpur, Malaysia
+INFO:services.numbeo_service:Cache hit for Kuwait City, Kuwait
+INFO:services.numbeo_service:Cache hit for Kyoto, Japan
+INFO:services.numbeo_service:Cache hit for Lagos, Nigeria
+INFO:services.numbeo_service:Cache hit for Lahore, Pakistan
+INFO:services.numbeo_service:Cache hit for Lima, Peru
+INFO:services.numbeo_service:Cache hit for Lisbon, Portugal
+INFO:services.numbeo_service:Cache hit for Los Angeles, United States
+INFO:services.numbeo_service:Cache hit for Madrid, Spain
+INFO:services.numbeo_service:Cache hit for Manchester, United Kingdom
+INFO:services.numbeo_service:Cache hit for Manila, Philippines
+INFO:services.numbeo_service:Cache hit for Melbourne, Australia
+INFO:services.numbeo_service:Cache hit for Mexico City, Mexico
+INFO:services.numbeo_service:Cache hit for Miami, United States
+INFO:services.numbeo_service:Cache hit for Milan, Italy
+INFO:services.numbeo_service:Cache hit for Montevideo, Uruguay
+INFO:services.numbeo_service:Cache hit for Montreal, Canada
+INFO:services.numbeo_service:Cache hit for Moscow, Russia
+INFO:services.numbeo_service:Cache hit for Mumbai, India
+INFO:services.numbeo_service:Cache hit for Nairobi, Kenya
+INFO:services.numbeo_service:Cache hit for New York, United States
+INFO:services.numbeo_service:Cache hit for Osaka, Japan
+INFO:services.numbeo_service:Cache hit for Oslo, Norway
+INFO:services.numbeo_service:Cache hit for Panama City, Panama
+INFO:services.numbeo_service:Cache hit for Paris, France
+INFO:services.numbeo_service:Cache hit for Perth, Australia
+INFO:services.numbeo_service:Cache hit for Prague, Czech Republic
+INFO:services.numbeo_service:Cache hit for Quito, Ecuador
+INFO:services.numbeo_service:Cache hit for Rio de Janeiro, Brazil
+INFO:services.numbeo_service:Cache hit for Riyadh, Saudi Arabia
+INFO:services.numbeo_service:Cache hit for Rome, Italy
+INFO:services.numbeo_service:Cache hit for San Francisco, United States
+INFO:services.numbeo_service:Cache hit for San Jose, Costa Rica
+INFO:services.numbeo_service:Cache hit for Santiago, Chile
+INFO:services.numbeo_service:Cache hit for Sao Paulo, Brazil
+INFO:services.numbeo_service:Cache hit for Seattle, United States
+INFO:services.numbeo_service:Cache hit for Seoul, South Korea
+INFO:services.numbeo_service:Cache hit for Shanghai, China
+INFO:services.numbeo_service:Cache hit for Shenzhen, China
+INFO:services.numbeo_service:Cache hit for Singapore, Singapore
+INFO:services.numbeo_service:Cache hit for St Petersburg, Russia
+INFO:services.numbeo_service:Cache hit for Stockholm, Sweden
+INFO:services.numbeo_service:Cache hit for Sydney, Australia
+INFO:services.numbeo_service:Cache hit for Taipei, Taiwan
+INFO:services.numbeo_service:Cache hit for Tel Aviv, Israel
+INFO:services.numbeo_service:Cache hit for Tokyo, Japan
+INFO:services.numbeo_service:Cache hit for Toronto, Canada
+INFO:services.numbeo_service:Cache hit for Vancouver, Canada
+INFO:services.numbeo_service:Cache hit for Vienna, Austria
+INFO:services.numbeo_service:Cache hit for Warsaw, Poland
+INFO:services.numbeo_service:Cache hit for Washington DC, United States
+INFO:services.numbeo_service:Cache hit for Wellington, New Zealand
+INFO:     127.0.0.1:50026 - "GET /api/convert_basic?salary=100000&source_city=London%2C%20United%20Kingdom&currency=EUR HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [35189]
