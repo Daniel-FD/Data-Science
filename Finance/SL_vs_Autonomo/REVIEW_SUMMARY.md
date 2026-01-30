@@ -205,6 +205,7 @@ Optimal salary: 59,876€
 - ✅ Input validation via Pydantic
 - ✅ Proper disclaimer about consulting professional advisors
 - ✅ Clear note that tax rates are approximate and as of January 2025
+- ✅ **FastAPI >= 0.110.0** (patched ReDoS vulnerability CVE-2024-XXXXX, fixed in 0.109.1)
 
 ## Deployment Readiness
 
