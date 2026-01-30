@@ -83,7 +83,7 @@ const Simulator = () => {
       "SL + Retención": results.sl_retencion,
       "SL + Dividendos": results.sl_dividendos,
       "SL Mixta": results.sl_mixto,
-    };
+    } as Record<string, any>;
   }, [results]);
 
   const bestLabel = useMemo(() => {

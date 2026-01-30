@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Any, Dict, List
 
 from fastapi import APIRouter
 
@@ -20,7 +20,7 @@ def regions() -> List[str]:
 
 
 @router.get("/presets")
-def presets() -> List[Dict[str, float]]:
+def presets() -> List[Dict[str, Any]]:
     return [
         {"label": "Programador 80K", "facturacion": 80_000, "gastos_deducibles": 2_000, "gastos_personales": 18_000},
         {"label": "Consultor 120K", "facturacion": 120_000, "gastos_deducibles": 4_000, "gastos_personales": 24_000},
