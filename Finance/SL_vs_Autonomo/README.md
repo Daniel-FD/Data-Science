@@ -93,11 +93,19 @@ cd backend
 pytest tests/ -v
 ```
 
-**76 tests** cubren:
+**83 tests** cubren:
 - IRPF ahorro y general (20 tests)
 - Impuesto de Sociedades (17 tests)
 - Cuotas autónomos y tarifa plana (21 tests)
 - Seguridad Social y solidaridad (18 tests)
+- **Integration tests de escenarios completos (7 tests)**
+  - Programador 60K en Madrid
+  - Consultor 120K en Barcelona
+  - Diseñador 45K en Galicia
+  - Freelancer 80K comparación completa
+  - Alto ingreso 150K en múltiples regiones
+  - Caso límite con ingreso mínimo
+  - Horizonte largo 30 años
 
 ## 📊 API Endpoints
 
