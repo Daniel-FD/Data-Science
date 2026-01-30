@@ -38,7 +38,7 @@ docker==5.0.3
 docopt==0.6.2
 entrypoints==0.4
 executing==0.8.3
-fastapi==0.75.2
+fastapi>=0.110.0  # CVE fix: ReDoS vulnerability patched in 0.109.1
 fastjsonschema==2.15.3
 ffmpy==0.3.0
 Flask==2.1.1
