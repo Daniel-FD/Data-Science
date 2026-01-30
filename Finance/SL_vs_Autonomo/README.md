@@ -65,7 +65,31 @@ SL_vs_Autonomo/
 
 ## 🚀 Quick Start
 
-### Backend
+**📖 For detailed setup instructions, see [STARTUP_GUIDE.md](./STARTUP_GUIDE.md)**
+
+### Automated Startup (Recommended)
+
+**Windows:**
+```bash
+# Double-click start.bat
+# Or run in terminal:
+start.bat
+```
+
+**Linux/Mac:**
+```bash
+./start.sh
+```
+
+This will automatically:
+- Install dependencies (first time)
+- Start backend on http://localhost:8000
+- Start frontend on http://localhost:5173
+- Open the app in your browser
+
+### Manual Startup
+
+#### Backend
 
 ```bash
 cd backend
@@ -76,7 +100,7 @@ python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 API disponible en: http://localhost:8000  
 Docs interactiva: http://localhost:8000/docs
 
-### Frontend
+#### Frontend
 
 ```bash
 cd frontend
