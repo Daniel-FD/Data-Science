@@ -97,6 +97,16 @@ const Simulator = () => {
   }, [results, scenarios]);
 
   const bestResult = bestLabel ? scenarios[bestLabel] : undefined;
+  const simpleAutonomo = results?.autonomo;
+  const simpleSL = results?.sl_retencion;
+  const simpleDelta =
+    simpleAutonomo && simpleSL ? simpleSL.renta_mensual_neta - simpleAutonomo.renta_mensual_neta : undefined;
+  const simpleVerdict = useMemo(() => {
+    if (simpleDelta === undefined) return "";
+    if (simpleDelta > 0) return t("article.simple.verdict.sl");
+    if (simpleDelta < 0) return t("article.simple.verdict.autonomo");
+    return t("article.simple.verdict.neutral");
+  }, [simpleDelta, t]);
 
   const effectiveRates = useMemo(
     () =>
@@ -117,71 +127,209 @@ const Simulator = () => {
     []
   );
 
+  const cardClass = "rounded-lg border border-slate-200 bg-white p-4";
+
   return (
-    <div className="grid gap-6 xl:grid-cols-[320px_1fr]">
-      <Sidebar
-        values={values}
-        regions={regions.length ? regions : [values.region]}
-        presets={presets}
-        onChange={setValues}
-        onPreset={onPreset}
-        onSimulate={onSimulate}
-      />
-
-      <div className="space-y-6">
-        <ResultsBanner
-          bestLabel={bestLabel}
-          bestResult={bestResult}
-          deltaMonthly={
-            bestResult && results ? bestResult.renta_mensual_neta - results.autonomo.renta_mensual_neta : undefined
-          }
-        />
-
-        <MetricsCards data={scenarios} />
-
-        <div className="rounded-xl border bg-white p-4">
-          <TaxWaterfall data={scenarios} />
-        </div>
-
-        <ComparisonTable data={scenarios} />
-
-        <div className="rounded-xl border bg-white p-4">
-          <CapitalEvolution data={scenarios} />
-        </div>
-
-        <div className="rounded-xl border bg-white p-4">
-          <MonthlyIncome data={scenarios} />
-        </div>
-
-        <div className="rounded-xl border bg-white p-4">
-          <EffectiveTaxRate data={effectiveRates} />
-        </div>
-
-        <div className="rounded-xl border bg-white p-4">
-          <OptimalSalary data={results?.optimal_salary_curve || []} />
-        </div>
-
-        <div className="grid gap-4 md:grid-cols-2">
-          <div className="rounded-xl border bg-white p-4">
-            <TaxComposition result={results?.autonomo} />
+    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
+      <article className="space-y-10">
+        <header className="space-y-4">
+          <p className="text-xs uppercase tracking-[0.3em] text-slate-400">{t("article.kicker")}</p>
+          <h1 className="text-3xl font-semibold leading-tight text-slate-900">{t("article.title")}</h1>
+          <p className="text-base text-slate-600">{t("article.subtitle")}</p>
+          <p className="text-xs text-slate-500">{t("article.meta")}</p>
+          <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+              {t("article.toc.title")}
+            </p>
+            <div className="mt-2 flex flex-wrap gap-3 text-xs text-slate-600">
+              <a className="hover:text-slate-900" href="#objective">
+                {t("article.toc.objective")}
+              </a>
+              <a className="hover:text-slate-900" href="#method">
+                {t("article.toc.method")}
+              </a>
+              <a className="hover:text-slate-900" href="#assumptions">
+                {t("article.toc.assumptions")}
+              </a>
+              <a className="hover:text-slate-900" href="#step-1">
+                {t("article.toc.step1")}
+              </a>
+              <a className="hover:text-slate-900" href="#step-2">
+                {t("article.toc.step2")}
+              </a>
+              <a className="hover:text-slate-900" href="#visuals">
+                {t("article.toc.visuals")}
+              </a>
+              <a className="hover:text-slate-900" href="#details">
+                {t("article.toc.details")}
+              </a>
+            </div>
           </div>
-          <div className="rounded-xl border bg-white p-4">
-            <TaxComposition result={results?.sl_mixto} />
+        </header>
+
+        <section id="objective" className="space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
+            {t("article.objective.title")}
+          </h2>
+          <p className="text-sm text-slate-600">{t("article.objective.body")}</p>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600">
+            <li>{t("article.objective.points.1")}</li>
+            <li>{t("article.objective.points.2")}</li>
+            <li>{t("article.objective.points.3")}</li>
+          </ul>
+        </section>
+
+        <section id="method" className="space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
+            {t("article.method.title")}
+          </h2>
+          <p className="text-sm text-slate-600">{t("article.method.body")}</p>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600">
+            <li>{t("article.method.points.1")}</li>
+            <li>{t("article.method.points.2")}</li>
+            <li>{t("article.method.points.3")}</li>
+          </ul>
+        </section>
+
+        <section id="assumptions" className="space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
+            {t("article.assumptions.title")}
+          </h2>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600">
+            <li>{t("article.assumptions.points.1")}</li>
+            <li>{t("article.assumptions.points.2")}</li>
+            <li>{t("article.assumptions.points.3")}</li>
+          </ul>
+        </section>
+
+        <section id="step-1" className="space-y-4">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
+            {t("article.simple.title")}
+          </h2>
+          <p className="text-sm text-slate-600">{t("article.simple.body")}</p>
+          <div className={cardClass}>
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-slate-600">{t("article.simple.autonomo")}</span>
+                <span className="font-semibold">
+                  {simpleAutonomo ? simpleAutonomo.renta_mensual_neta.toFixed(2) : "—"}
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-slate-600">{t("article.simple.sl")}</span>
+                <span className="font-semibold">
+                  {simpleSL ? simpleSL.renta_mensual_neta.toFixed(2) : "—"}
+                </span>
+              </div>
+              <div className="flex items-center justify-between border-t pt-3 text-sm">
+                <span className="text-slate-600">{t("article.simple.delta")}</span>
+                <span className={`font-semibold ${simpleDelta && simpleDelta >= 0 ? "text-emerald-600" : "text-rose-600"}`}>
+                  {simpleDelta !== undefined ? simpleDelta.toFixed(2) : "—"}
+                </span>
+              </div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{simpleVerdict}</p>
+              <p className="text-xs text-slate-500">{t("article.simple.note")}</p>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <SensitivityHeatmap data={heatmapData} />
+        <section id="step-2" className="space-y-4">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-700">
+            {t("article.results.title")}
+          </h2>
+          <p className="text-sm text-slate-600">{t("article.results.body")}</p>
 
-        <div className="rounded-xl border bg-white p-4">
-          <CrossoverPoint data={results?.crossover || []} />
-        </div>
+          <ResultsBanner
+            bestLabel={bestLabel}
+            bestResult={bestResult}
+            deltaMonthly={
+              bestResult && results ? bestResult.renta_mensual_neta - results.autonomo.renta_mensual_neta : undefined
+            }
+          />
 
-        <DetailTabs data={scenarios} />
+          <MetricsCards data={scenarios} />
 
-        <Explanations />
+          <div className={cardClass}>
+            <TaxWaterfall data={scenarios} />
+          </div>
+
+          <ComparisonTable data={scenarios as any} />
+        </section>
+
+        <section id="visuals" className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+              {t("article.sections.capital")}
+            </h3>
+            <div className={cardClass}>
+              <CapitalEvolution data={Object.entries(scenarios).map(([, s]) => ({ ano: 0, ...(s as any) })) as any} title={t("article.sections.capital")} />
+            </div>
+            <div className={cardClass}>
+              <MonthlyIncome data={scenarios} />
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+              {t("article.sections.tax")}
+            </h3>
+            <div className={cardClass}>
+              <EffectiveTaxRate data={effectiveRates} />
+            </div>
+            <div className={cardClass}>
+              <OptimalSalary
+                curve={(results?.optimal_salary_curve || []).map(p => ({ salary: p.salario, net_income: p.renta_mensual_neta, total_impuestos: p.impuestos_totales }))}
+                optimalSalary={results?.optimal_salary || 0}
+                title={t("article.sections.tax")}
+              />
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className={cardClass}>
+                <TaxComposition result={results?.autonomo} />
+              </div>
+              <div className={cardClass}>
+                <TaxComposition result={results?.sl_mixto} />
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+              {t("article.sections.sensitivity")}
+            </h3>
+            <SensitivityHeatmap
+              matrix={heatmapData.map(row => [row.value])}
+              title={t("article.sections.sensitivity")}
+            />
+            <div className={cardClass}>
+              <CrossoverPoint data={results?.crossover || []} />
+            </div>
+          </div>
+        </section>
+
+        <section id="details" className="space-y-4">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+            {t("article.sections.details")}
+          </h3>
+          <DetailTabs data={scenarios} />
+          <Explanations />
+        </section>
 
         <div className="text-xs text-slate-500">{t("disclaimer")}</div>
-      </div>
+      </article>
+
+      <aside className="space-y-4">
+        <div className="sticky top-6">
+          <Sidebar
+            values={values}
+            regions={regions.length ? regions : [values.region]}
+            presets={presets}
+            onChange={setValues}
+            onPreset={onPreset}
+            onSimulate={onSimulate}
+          />
+        </div>
+      </aside>
     </div>
   );
 };

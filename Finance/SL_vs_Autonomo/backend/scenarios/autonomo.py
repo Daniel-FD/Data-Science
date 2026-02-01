@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from .models import ScenarioResult, ScenarioYear, SimulationRequest
-from ..tax_engine.autonomos import calcular_cuota_autonomos
-from ..tax_engine.irpf import calcular_irpf_ahorro, calcular_irpf_general
+from scenarios.models import ScenarioResult, ScenarioYear, SimulationRequest
+from tax_engine.autonomos import calcular_cuota_autonomos
+from tax_engine.irpf import calcular_irpf_ahorro, calcular_irpf_general
 
 
 def simulate_autonomo(req: SimulationRequest) -> ScenarioResult:

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:cuentica.com)",
+      "WebFetch(domain:taxfix.com)",
+      "WebFetch(domain:fiscaliza.es)",
+      "WebFetch(domain:www.thesalarycalculator.co.uk)",
+      "WebFetch(domain:muaytax.com)",
+      "WebFetch(domain:es.talent.com)",
+      "WebFetch(domain:entretramites.com)",
+      "WebFetch(domain:www.calcularnomina.es)",
+      "Bash(python -c:*)",
+      "Bash(python3 -c:*)",
+      "Bash(npm install:*)",
+      "Bash(export NVM_DIR=\"$HOME/.nvm\")",
+      "Bash([ -s \"$NVM_DIR/nvm.sh\" ])",
+      "Bash(. \"$NVM_DIR/nvm.sh\")",
+      "Bash(npx tsc:*)",
+      "Bash(npx vite build)",
+      "Bash(python3 -m pip:*)",
+      "Bash(curl:*)",
+      "Bash(npx vite:*)",
+      "Bash(lsof:*)",
+      "Bash(node -e:*)",
+      "Bash(node:*)",
+      "Bash(find:*)",
+      "Bash(python3:*)",
+      "Bash(xargs kill:*)",
+      "Bash(python -m uvicorn:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(npm run build:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}

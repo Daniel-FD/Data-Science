@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from .models import ScenarioResult, ScenarioYear, SimulationRequest
-from ..tax_engine.impuesto_sociedades import calcular_is
-from ..tax_engine.irpf import calcular_irpf_ahorro, calcular_irpf_general
-from ..tax_engine.seguridad_social import (
+from scenarios.models import ScenarioResult, ScenarioYear, SimulationRequest
+from tax_engine.impuesto_sociedades import calcular_is
+from tax_engine.irpf import calcular_irpf_ahorro, calcular_irpf_general
+from tax_engine.seguridad_social import (
     calcular_solidaridad,
     calcular_ss_empresa,
     calcular_ss_trabajador,
