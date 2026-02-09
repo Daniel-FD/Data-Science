@@ -1,7 +1,8 @@
 """
-Vercel Serverless Function Adapter
-===================================
-Wraps the FastAPI backend for Vercel's Python serverless runtime.
+Vercel Serverless Function - FastAPI Backend
+=============================================
+Vercel has built-in ASGI support for FastAPI.
+No need for mangum - just export the app.
 """
 
 import sys
@@ -13,7 +14,6 @@ sys.path.insert(0, str(backend_path.parent))
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from mangum import Mangum
 
 # Import from backend package
 from backend.models.schemas import (
@@ -37,11 +37,11 @@ app = FastAPI(
     version="2.0.0",
 )
 
-# CORS
+# CORS - allow all origins for API access
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -264,7 +264,3 @@ async def reverse_autonomo(
         salario_neto_objetivo, region, gastos_deducibles_pct, tarifa_plana
     )
     return {"salario_neto_objetivo": salario_neto_objetivo, "facturacion_necesaria": facturacion}
-
-
-# Vercel handler
-handler = Mangum(app, lifespan="off")
