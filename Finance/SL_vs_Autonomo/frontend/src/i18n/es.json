@@ -1,0 +1,499 @@
+{
+  "app": {
+    "title": "Simulador Fiscal"
+  },
+  "nav": {
+    "home": "Inicio",
+    "employee": "Asalariado",
+    "autonomo": "Autónomo",
+    "sl": "Sociedad Limitada",
+    "comparator": "Comparador",
+    "investment_sim": "Inversión",
+    "language": "Idioma",
+    "link": {
+      "employee": "Calculadora de Asalariado",
+      "autonomo": "Calculadora de Autónomo",
+      "sl": "Calculadora de SL",
+      "comparator": "Comparador de Regímenes"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Simulador Fiscal de España",
+      "subtitle": "Calcula tus impuestos como asalariado, autónomo o a través de una Sociedad Limitada. Compara escenarios y toma decisiones informadas sobre tu estructura fiscal."
+    },
+    "card": {
+      "employee": {
+        "title": "Asalariado",
+        "desc": "Calcula tu salario neto a partir del bruto. Incluye IRPF, Seguridad Social y deducciones por comunidad autónoma."
+      },
+      "autonomo": {
+        "title": "Autónomo",
+        "desc": "Estima tu renta neta como trabajador por cuenta propia. Incluye cuota de autónomos, IRPF y gastos deducibles."
+      },
+      "sl": {
+        "title": "Sociedad Limitada",
+        "desc": "Simula la fiscalidad de una SL: Impuesto de Sociedades, salario de administrador, dividendos y doble imposición."
+      },
+      "comparator": {
+        "title": "Comparador",
+        "desc": "Compara las tres estructuras fiscales lado a lado para el mismo nivel de ingresos y descubre cuál es más eficiente."
+      },
+      "investment": {
+        "title": "Simulador de Inversión",
+        "desc": "Simula a largo plazo cuánto capital acumularías invirtiendo como autónomo vs a través de una SL, con ventaja fiscal del Impuesto de Sociedades."
+      }
+    },
+    "footer": "Simulador Fiscal de España — Proyecto educativo de código abierto"
+  },
+  "employee": {
+    "title": "Calculadora de Asalariado",
+    "intro": {
+      "p1": "Si trabajas por cuenta ajena en España, tu empresa te paga un salario bruto del que se descuentan impuestos y cotizaciones antes de que el dinero llegue a tu cuenta. Es importante entender cómo se calcula tu nómina para poder valorar ofertas de trabajo y planificar tus finanzas.",
+      "p2": "Tu salario bruto se reduce principalmente por dos conceptos: las cotizaciones a la Seguridad Social (alrededor del 6,35% de tu base) y la retención del IRPF. El IRPF es progresivo: los primeros euros tributan a un tipo bajo y a medida que ganas más, los tramos superiores pagan un porcentaje mayor.",
+      "p3": "Además, cada comunidad autónoma puede tener tramos autonómicos ligeramente diferentes, lo que hace que tu neto pueda variar según dónde residas. Esta calculadora tiene en cuenta todas estas variables para darte una estimación precisa."
+    },
+    "calculator": {
+      "title": "Datos del empleado",
+      "salary": "Salario bruto anual",
+      "region": "Comunidad Autónoma",
+      "pagas": "Número de pagas",
+      "pagas_label": "pagas",
+      "advanced": "Opciones avanzadas",
+      "advanced_placeholder": "Próximamente: deducciones personales, discapacidad, situación familiar, etc."
+    },
+    "result": {
+      "net_monthly": "Salario neto mensual",
+      "per_year": "/ año",
+      "employer_cost": "Coste para la empresa",
+      "employer_cost_subtitle": "Salario bruto + Seguridad Social empresa",
+      "breakdown": "Desglose de tu nómina",
+      "employer_breakdown_title": "Desglose del coste empresarial"
+    },
+    "learn": {
+      "irpf": {
+        "title": "¿Qué es el IRPF y cómo funcionan los tramos?",
+        "content": "El IRPF (Impuesto sobre la Renta de las Personas Físicas) es el principal impuesto que pagan los trabajadores en España. Se trata de un impuesto progresivo, lo que significa que no todos tus ingresos tributan al mismo porcentaje. En su lugar, tu renta se divide en tramos y cada tramo tiene un tipo impositivo diferente.\nPor ejemplo, los primeros 12.450 euros tributan al 19%, los siguientes (hasta 20.200 euros) al 24%, y así sucesivamente hasta llegar al tipo máximo del 47% para rentas superiores a 300.000 euros. Esto significa que si ganas 30.000 euros, no pagas el 30% sobre todo: los primeros euros pagan muy poco y solo los últimos euros pagan el tipo más alto.\nAdemás del tramo estatal, cada comunidad autónoma tiene sus propios tramos autonómicos que se suman al estatal. Por eso, dos personas con el mismo salario pueden tener retenciones ligeramente diferentes según dónde vivan. Madrid, por ejemplo, tiene tipos autonómicos más bajos que Cataluña o Andalucía.\nEs importante distinguir entre tipo marginal (el porcentaje que pagas por tu último euro ganado) y tipo efectivo (el porcentaje medio real sobre toda tu renta). Tu tipo efectivo siempre será menor que tu tipo marginal gracias a la progresividad del impuesto."
+      },
+      "pagas": {
+        "title": "14 pagas vs 12 pagas: ¿qué diferencia hay?",
+        "content": "En España es habitual recibir el salario repartido en 14 pagas en lugar de 12. Las dos pagas extra suelen abonarse en junio y diciembre y se conocen como pagas extraordinarias. Esto no cambia tu salario bruto anual ni los impuestos totales que pagas, pero sí afecta a la cantidad que recibes cada mes.\nCon 14 pagas, cada mensualidad es más pequeña (tu bruto anual dividido entre 14), pero recibes dos pagos adicionales al año que muchas personas utilizan para gastos extraordinarios como vacaciones o Navidad. Con 12 pagas, cada mes recibes una cantidad mayor (tu bruto anual dividido entre 12), lo que facilita la planificación mensual.\nDesde el punto de vista fiscal, el resultado final es idéntico: pagas los mismos impuestos y cotizaciones al año. La diferencia es puramente de flujo de caja. Algunas empresas permiten elegir entre ambas opciones, mientras que muchos convenios colectivos establecen 14 pagas por defecto.\nSi prefieres tener un control más regular de tus finanzas y evitar la tentación de gastar las extras, las 12 pagas pueden ser más convenientes. Si valoras tener un colchón extra dos veces al año, las 14 pagas son la opción tradicional."
+      },
+      "employer": {
+        "title": "¿Cuánto paga realmente tu empresa por ti?",
+        "content": "El salario bruto que aparece en tu contrato no es el coste total que tiene tu empresa por tenerte en plantilla. Además de tu bruto, la empresa paga las cotizaciones patronales a la Seguridad Social, que suponen aproximadamente un 30-33% adicional sobre tu base de cotización.\nEstas cotizaciones patronales cubren contingencias comunes (23,60%), desempleo (5,50% para contratos indefinidos), formación profesional (0,60%) y el Fondo de Garantía Salarial (FOGASA, 0,20%). En total, si tu salario bruto es de 30.000 euros, tu empresa está pagando alrededor de 39.000-40.000 euros en total entre tu salario y sus cotizaciones.\nEsto es importante por varias razones. Cuando negocias tu salario, la empresa piensa en tu coste total, no solo en tu bruto. Si pides un aumento de 3.000 euros brutos, el coste real para la empresa es de unos 4.000 euros. Del mismo modo, cuando comparas ser asalariado con ser autónomo, debes tener en cuenta que parte de tu protección social la está financiando tu empresa.\nEntender este coste total te da una perspectiva más realista sobre el valor de tu puesto de trabajo y te ayuda a negociar de forma más informada."
+      }
+    }
+  },
+  "autonomo": {
+    "title": "Calculadora de Autónomo",
+    "intro": {
+      "p1": "Un autónomo (trabajador por cuenta propia) en España factura directamente a sus clientes y se encarga de pagar sus propios impuestos y cotizaciones. A diferencia de un asalariado, el autónomo puede deducir los gastos necesarios para su actividad antes de calcular el IRPF.",
+      "p2": "La principal obligación fija es la cuota de autónomos a la Seguridad Social, que desde 2023 se calcula según tramos de rendimiento neto. Los nuevos autónomos pueden beneficiarse de la tarifa plana (80 euros/mes durante el primer año, ampliable). Tras deducir gastos y cuota, el rendimiento neto se somete al IRPF progresivo."
+    },
+    "reverse": {
+      "title": "Calculadora inversa",
+      "desc": "¿Cuánto necesitas facturar para obtener tu salario neto objetivo?",
+      "target": "Salario neto objetivo",
+      "result_label": "Necesitas facturar"
+    },
+    "calculator": {
+      "title": "Datos del autónomo",
+      "billing": "Facturación anual",
+      "region": "Comunidad Autónoma",
+      "cuota": "Cuota de autónomos (€/mes)",
+      "cuota_tarifa_plana": "Tarifa plana (80 €/mes)",
+      "cuota_normal": "Normal (por tramos)",
+      "cuota_custom": "Personalizada",
+      "advanced": "Opciones avanzadas",
+      "expenses": "Gastos deducibles (%)"
+    },
+    "result": {
+      "net_monthly": "Renta neta mensual",
+      "per_year": "/ año",
+      "salary_equiv": "Equivalente en salario bruto de asalariado",
+      "breakdown": "Desglose de ingresos"
+    },
+    "learn": {
+      "cuota": {
+        "title": "¿Qué es la cuota de autónomos?",
+        "content": "La cuota de autónomos es la cotización mensual obligatoria que todo trabajador por cuenta propia debe pagar a la Seguridad Social. Desde 2023, España implantó un sistema de cotización por tramos basado en los rendimientos netos reales del autónomo, sustituyendo el antiguo sistema de base de cotización libre.\nEn este nuevo sistema, tu cuota mensual depende de cuánto ganas realmente. Los tramos van desde unos 230 euros al mes para rendimientos netos bajos (menos de 670 euros/mes) hasta más de 500 euros al mes para rendimientos superiores a 6.000 euros mensuales. El sistema se está implantando gradualmente hasta 2025, con cuotas que se ajustarán cada año.\nEsta cuota te da derecho a prestaciones como la asistencia sanitaria, la jubilación, la incapacidad temporal (baja por enfermedad), la prestación por cese de actividad (el equivalente al desempleo de los autónomos) y la protección por accidente de trabajo. Es un gasto fijo que debes tener en cuenta al calcular tu rentabilidad.\nA diferencia de un asalariado, donde la empresa paga la mayor parte de las cotizaciones, como autónomo tú asumes el 100% de tu cotización. Por eso es fundamental incluirla en tus cálculos al fijar tus tarifas y presupuestos."
+      },
+      "deductions": {
+        "title": "¿Qué gastos puedes deducir como autónomo?",
+        "content": "Una de las principales ventajas de ser autónomo es la posibilidad de deducir los gastos necesarios para tu actividad profesional antes de calcular el IRPF. Esto reduce tu base imponible y, por tanto, los impuestos que pagas. Sin embargo, Hacienda exige que los gastos estén directamente vinculados a tu actividad y debidamente justificados con factura.\nLos gastos deducibles más comunes incluyen: la cuota de autónomos, el alquiler de oficina o local, suministros (luz, agua, internet si trabajas desde casa, con un porcentaje del 30% de la parte proporcional), material de oficina, servicios profesionales (gestoría, abogado), formación relacionada con tu actividad, seguros profesionales, amortización de equipos (ordenador, herramientas), dietas y desplazamientos justificados, y cuotas de colegios profesionales.\nSi trabajas desde casa, puedes deducir una parte proporcional de los gastos de la vivienda según los metros cuadrados destinados a la actividad. Esta deducción está limitada al 30% de la proporción de metros afectados. También puedes deducir el IVA soportado en tus compras profesionales a través de las declaraciones trimestrales de IVA.\nEs fundamental llevar una contabilidad ordenada y conservar todas las facturas durante al menos cuatro años. Un error común es deducir gastos personales como profesionales, lo que puede generar sanciones en una inspección. Ante la duda, consulta con tu gestor."
+      },
+      "tarifa": {
+        "title": "Tarifa plana de autónomos: cómo funciona",
+        "content": "La tarifa plana es una bonificación para nuevos autónomos que reduce significativamente la cuota de la Seguridad Social durante los primeros meses de actividad. Actualmente, los nuevos autónomos pagan una cuota reducida de 80 euros al mes durante los primeros 12 meses, independientemente de sus ingresos.\nEsta bonificación puede extenderse otros 12 meses adicionales (total 24 meses) si tus rendimientos netos durante el primer año no superan el Salario Mínimo Interprofesional (SMI). Esto supone un ahorro considerable, ya que la cuota mínima ordinaria ronda los 230 euros mensuales. En total, puedes ahorrarte entre 1.800 y 3.600 euros en tus primeros uno o dos años.\nPara acceder a la tarifa plana debes cumplir ciertos requisitos: no haber estado dado de alta como autónomo en los dos años anteriores (tres años si ya disfrutaste de esta bonificación antes), y darte de alta en el Régimen Especial de Trabajadores Autónomos (RETA). No es compatible con ser autónomo colaborador familiar.\nLa tarifa plana es una herramienta excelente para reducir los costes fijos al inicio de tu actividad, cuando los ingresos suelen ser más inciertos. Sin embargo, recuerda que durante este periodo también cotizas por una base mínima, lo que afecta a tus futuras prestaciones como la jubilación o la baja por enfermedad."
+      }
+    }
+  },
+  "sl": {
+    "title": "Calculadora de Sociedad Limitada",
+    "intro": {
+      "p1": "Una Sociedad Limitada (SL) es una estructura empresarial en la que la empresa tiene personalidad jurídica propia. Como administrador y socio, puedes cobrar un salario (que tributa por IRPF como un asalariado) y repartir dividendos del beneficio restante (que tributan por el Impuesto de Sociedades y luego por IRPF del ahorro).",
+      "p2": "La ventaja principal de una SL es que el Impuesto de Sociedades tiene un tipo fijo (25%, o 15% para empresas de nueva creación los dos primeros años), generalmente menor que el tipo marginal del IRPF para rentas altas. Sin embargo, si quieres disponer del beneficio como persona física, pagarás una segunda capa de impuestos sobre los dividendos."
+    },
+    "calculator": {
+      "title": "Datos de la Sociedad Limitada",
+      "billing": "Facturación anual de la SL",
+      "salary": "Salario del administrador",
+      "region": "Comunidad Autónoma",
+      "advanced": "Opciones avanzadas",
+      "company_expenses": "Otros gastos de la empresa (€/año)",
+      "gestoria": "Gastos de gestoría (€/año)",
+      "company_type": "Tipo de empresa",
+      "type_normal": "Empresa estándar (IS 25%)",
+      "type_nueva": "Nueva creación (IS 15%)",
+      "type_reducida": "Tipo reducido",
+      "dividends_pct": "Porcentaje de dividendos a repartir"
+    },
+    "result": {
+      "net_monthly": "Renta neta mensual total",
+      "net_monthly_subtitle": "Salario neto + dividendos netos",
+      "optimal_salary": "Salario óptimo del administrador",
+      "breakdown": "Desglose de ingresos"
+    },
+    "learn": {
+      "is": {
+        "title": "¿Qué es el Impuesto de Sociedades?",
+        "content": "El Impuesto de Sociedades (IS) es el tributo que grava los beneficios de las empresas en España. A diferencia del IRPF, que es progresivo con tipos que van del 19% al 47%, el IS tiene un tipo fijo general del 25%. Para empresas de nueva creación, el tipo se reduce al 15% durante los dos primeros ejercicios con base imponible positiva.\nLa base imponible del IS se calcula restando a los ingresos de la empresa todos los gastos deducibles: salarios (incluido el del administrador), alquiler, suministros, gestoría, amortizaciones, seguros y cualquier gasto necesario para la actividad. Esto significa que el salario que te asignas como administrador reduce directamente el beneficio que tributa por IS.\nEl IS se liquida anualmente (modelo 200) con pagos fraccionados trimestrales (modelo 202). Los pagos fraccionados suponen el 18% de la cuota del último ejercicio declarado o, alternativamente, el 17% del beneficio del trimestre en curso. La declaración anual se presenta en julio del año siguiente.\nPara una SL unipersonal, la estrategia fiscal pasa por equilibrar el salario del administrador (que tributa por IRPF progresivo) con el beneficio societario (que tributa al tipo fijo del IS). La clave está en encontrar la combinación óptima que minimice la carga fiscal global."
+      },
+      "doble": {
+        "title": "La doble imposición de los dividendos",
+        "content": "La doble imposición es uno de los conceptos más importantes a entender cuando operas a través de una SL. Ocurre porque el mismo beneficio empresarial se grava dos veces: primero a nivel de la empresa (Impuesto de Sociedades) y después a nivel personal cuando te repartes ese beneficio como dividendos (IRPF del ahorro).\nVeamos un ejemplo: si tu SL genera 100.000 euros de beneficio antes de IS, paga un 25% de IS (25.000 euros), quedando 75.000 euros de beneficio neto. Cuando te repartes esos 75.000 euros como dividendos, tributas por el IRPF del ahorro: el 19% sobre los primeros 6.000 euros, el 21% hasta 50.000 euros, el 23% hasta 200.000 euros y el 27% a partir de ahí. Sobre esos 75.000 euros pagarías unos 15.750 euros adicionales de IRPF.\nEn total, de los 100.000 euros iniciales habrías pagado 25.000 + 15.750 = 40.750 euros en impuestos, lo que equivale a un tipo efectivo combinado del 40,75%. Este tipo efectivo es similar o incluso superior al tipo marginal del IRPF para rentas de esa cuantía si fueras autónomo.\nPor eso, la SL no siempre es más ventajosa que el régimen de autónomos. La ventaja real aparece cuando puedes dejar parte del beneficio dentro de la empresa (para reinvertir o como colchón financiero) sin repartirlo como dividendos, evitando así la segunda capa de tributación."
+      },
+      "when": {
+        "title": "¿Cuándo merece la pena constituir una SL?",
+        "content": "La decisión de constituir una Sociedad Limitada depende de varios factores, no solo fiscales. Desde el punto de vista tributario, la SL empieza a ser interesante cuando tus ingresos netos como autónomo superan los 40.000-50.000 euros anuales, ya que a partir de ese nivel el tipo marginal del IRPF (37%-45%) supera significativamente el tipo del IS (25% o 15%).\nSin embargo, la SL conlleva costes fijos que debes tener en cuenta: gestoría especializada en sociedades (entre 150 y 300 euros al mes), la constitución inicial (unos 600-1.500 euros notaría y registro), el capital social mínimo de 1 euro (aunque tradicionalmente se aportaban 3.000 euros), la obligación de llevar contabilidad mercantil, depositar cuentas anuales en el Registro Mercantil y presentar el Impuesto de Sociedades.\nLas principales ventajas no fiscales de la SL incluyen: responsabilidad limitada al capital aportado (tu patrimonio personal está protegido), mayor credibilidad frente a clientes y proveedores, facilidad para incorporar socios o inversores, y la posibilidad de planificar la tributación a lo largo del tiempo dejando beneficios en la empresa.\nComo regla general, si facturas menos de 40.000 euros anuales, el régimen de autónomos suele ser más sencillo y económico. Entre 40.000 y 80.000 euros, conviene hacer números con un asesor. Por encima de 80.000-100.000 euros, la SL suele ser claramente ventajosa, especialmente si no necesitas disponer de todo el beneficio cada año."
+      }
+    }
+  },
+  "comparator": {
+    "title": "Comparador de Regímenes Fiscales",
+    "intro": {
+      "p1": "Este comparador te permite ver, para un mismo nivel de ingresos, cuánto te quedaría como asalariado, como autónomo o facturando a través de una SL. Es la herramienta ideal para decidir qué estructura fiscal se adapta mejor a tu situación.",
+      "p2": "Ten en cuenta que cada régimen tiene ventajas y desventajas más allá de la pura fiscalidad: un asalariado tiene mayor protección laboral, un autónomo tiene flexibilidad total, y una SL ofrece responsabilidad limitada pero conlleva costes de gestión fijos."
+    },
+    "income": {
+      "title": "Nivel de ingresos",
+      "annual": "Ingreso anual bruto",
+      "region": "Comunidad Autónoma"
+    },
+    "comparison": {
+      "title": "Resultados de la comparación",
+      "best_label": "Mejor opción",
+      "crossover_title": "Punto de cruce por nivel de ingresos",
+      "net_title": "Ingreso neto mensual por régimen"
+    },
+    "best": {
+      "label": "Mejor opción para tu nivel de ingresos",
+      "saves": "Ahorras",
+      "vs_worst": "respecto a la peor opción"
+    },
+    "qualitative": {
+      "title": "Comparación cualitativa",
+      "aspect": "Aspecto",
+      "employee": "Asalariado",
+      "autonomo": "Autónomo",
+      "sl": "Sociedad Limitada",
+      "vacation": {
+        "label": "Vacaciones y Descanso",
+        "employee": "30 días de vacaciones remuneradas + festivos",
+        "autonomo": "Sin vacaciones garantizadas; si no trabajas, no ganas",
+        "sl": "Sin vacaciones garantizadas; igual que autónomo cuando no trabajas"
+      },
+      "unemployment": {
+        "label": "Protección por Desempleo",
+        "employee": "Derecho a prestación por desempleo",
+        "autonomo": "Prestación por cese de actividad limitada; cobertura reducida",
+        "sl": "Depende de la clasificación de la cuota del administrador"
+      },
+      "pension": {
+        "label": "Contribuciones de Jubilación",
+        "employee": "Cotizaciones Régimen General (empresa + empleado)",
+        "autonomo": "Cotizaciones RETA autofinanciadas; flexibles pero 100% a tu cargo",
+        "sl": "Cotizaciones similar a asalariado; flexible para ajustes"
+      },
+      "flexibility": {
+        "label": "Flexibilidad Horaria y Laboral",
+        "employee": "Horario fijo; flexibilidad limitada",
+        "autonomo": "Flexibilidad total; fijas tus propias horas y tarifas",
+        "sl": "Horario flexible pero obligaciones administrativas constantes"
+      },
+      "costs": {
+        "label": "Costes Administrativos",
+        "employee": "Cero; la empresa gestiona todo",
+        "autonomo": "Bajos a moderados; gestoría alrededor de 50-100 EUR/mes",
+        "sl": "Máximos; gestoría, registro, cuentas anuales: 150-300+ EUR/mes"
+      },
+      "difficulty": {
+        "label": "Complejidad y Cumplimiento",
+        "employee": "Más simple; la empresa gestiona nómina e impuestos",
+        "autonomo": "Moderada; IVA trimestral, declaración anual, contabilidad",
+        "sl": "Máxima complejidad; cuentas anuales, IS, compliance obligatorio"
+      }
+    },
+    "investment": {
+      "title": "Simulación de inversión a largo plazo",
+      "intro": "Compara cómo el ahorro mensual de cada régimen se acumularía invirtiendo a lo largo del tiempo.",
+      "params": "Parámetros de inversión",
+      "expenses": "Gastos mensuales",
+      "return": "Rentabilidad anual esperada (%)",
+      "years": "Horizonte de inversión (años)",
+      "capital_evolution": "Evolución del capital acumulado",
+      "sensitivity_title": "Sensibilidad: capital final según rentabilidad y horizonte",
+      "year_detail": "Ver detalle año por año",
+      "year": "Año",
+      "after_years": "tras {{years}} años"
+    },
+    "learn": {
+      "4pct": {
+        "title": "La regla del 4% y la independencia financiera",
+        "content": "La regla del 4% es un principio ampliamente utilizado en planificación financiera que establece que puedes retirar un 4% de tu cartera de inversión cada año sin agotar tu capital a lo largo de 30 años o más. Esta regla se basa en el estudio Trinity de 1998, que analizó datos históricos del mercado estadounidense.\nEn la práctica, esto significa que si necesitas 2.000 euros al mes (24.000 euros al año) para vivir, necesitarías acumular un capital de 600.000 euros (24.000 / 0,04). A partir de ese momento, podrías dejar de trabajar y vivir de las rentas de tu inversión, ajustando la retirada anual por inflación.\nEsta regla es útil como referencia, pero tiene limitaciones. Se basa en datos históricos de mercados desarrollados y no garantiza resultados futuros. Además, asume una cartera diversificada entre renta variable y renta fija. En contextos de baja rentabilidad o alta inflación, un porcentaje de retirada del 3-3,5% puede ser más prudente.\nEn el contexto de este comparador, la diferencia de ahorro mensual entre regímenes fiscales se acumula significativamente a lo largo del tiempo. Elegir la estructura fiscal más eficiente puede adelantar tu independencia financiera varios años."
+      },
+      "marginal": {
+        "title": "Tipo marginal vs tipo efectivo",
+        "content": "Entender la diferencia entre tipo marginal y tipo efectivo es fundamental para tomar decisiones fiscales informadas. El tipo marginal es el porcentaje de impuestos que pagas por tu último euro ganado, determinado por el tramo más alto del IRPF que alcanzas. El tipo efectivo es el porcentaje medio real que pagas sobre toda tu renta.\nPor ejemplo, si ganas 40.000 euros, tu tipo marginal podría ser del 37% (el tramo correspondiente a rentas entre 35.200 y 60.000 euros), pero tu tipo efectivo sería de alrededor del 22%, porque los primeros euros tributaron a tipos mucho más bajos (19%, 24%, 30%).\nEsta distinción es clave al comparar regímenes fiscales. Cuando alguien dice que el Impuesto de Sociedades al 25% es mejor que el IRPF al 37%, está comparando un tipo fijo con un tipo marginal, lo cual es engañoso. La comparación correcta debe considerar el tipo efectivo total incluyendo, en el caso de la SL, la doble imposición de los dividendos.\nEn este comparador, calculamos el tipo efectivo real de cada régimen teniendo en cuenta todas las capas impositivas. Esto te permite hacer una comparación justa y tomar decisiones basadas en datos reales, no en porcentajes aislados que pueden llevar a conclusiones erróneas."
+      },
+      "compound": {
+        "title": "El poder del interés compuesto en el ahorro fiscal",
+        "content": "El interés compuesto es el mecanismo por el cual los rendimientos de tu inversión generan a su vez nuevos rendimientos. Albert Einstein supuestamente lo llamó la octava maravilla del mundo. En el contexto fiscal, pequeñas diferencias en el ahorro mensual entre regímenes se amplifican enormemente con el paso del tiempo gracias a este efecto.\nImagina que el régimen fiscal más eficiente te ahorra 300 euros al mes respecto al menos eficiente. En un año son 3.600 euros, una diferencia modesta. Pero si inviertes esa diferencia mensualmente con una rentabilidad del 7% anual durante 20 años, acumularías más de 150.000 euros adicionales. En 30 años, superarías los 350.000 euros.\nLa clave del interés compuesto es el tiempo. Cuanto antes optimices tu estructura fiscal y comiences a invertir el ahorro, mayor será el efecto multiplicador. Un euro ahorrado e invertido a los 30 años vale mucho más que uno ahorrado a los 50 por el efecto acumulativo de décadas de rentabilidad compuesta.\nPor eso este comparador incluye una simulación de inversión a largo plazo. No basta con comparar el neto mensual de cada régimen: hay que visualizar el impacto acumulado a lo largo de tu carrera profesional. La estructura fiscal que elijas hoy puede marcar una diferencia de cientos de miles de euros en tu patrimonio futuro."
+      }
+    }
+  },
+  "sidebar": {
+    "title": "Parámetros",
+    "region": "Comunidad Autónoma",
+    "presets": "Presets",
+    "income": {
+      "facturacion": "Facturación anual",
+      "gastos_deducibles": "Gastos deducibles",
+      "gastos_personales": "Gastos personales",
+      "aportacion_plan_pensiones": "Aportación a plan de pensiones"
+    },
+    "company": {
+      "salario_administrador": "Salario del administrador",
+      "gastos_gestoria": "Gastos de gestoría",
+      "turnover": "Cifra de negocio",
+      "company_age": "Antigüedad de la empresa",
+      "is_startup": "Empresa de nueva creación"
+    },
+    "investment": {
+      "capital_inicial": "Capital inicial",
+      "rentabilidad": "Rentabilidad anual"
+    },
+    "horizon": {
+      "años": "Horizonte temporal",
+      "tarifa_plana": "Tarifa plana de autónomos"
+    },
+    "simulate": "Simular",
+    "income_title": "Ingresos",
+    "company_title": "Empresa",
+    "investment_title": "Inversión",
+    "horizon_title": "Horizonte"
+  },
+  "results": {
+    "best": "Mejor opción",
+    "monthly": "Neto mensual"
+  },
+  "table": {
+    "metric": "Métrica",
+    "ingreso_bruto": "Ingreso bruto",
+    "seguridad_social": "Seguridad Social",
+    "irpf": "IRPF",
+    "impuesto_sociedades": "Impuesto de Sociedades",
+    "neto_anual": "Neto anual",
+    "neto_mensual": "Neto mensual",
+    "tipo_efectivo": "Tipo efectivo"
+  },
+  "charts": {
+    "returnRate": "Rentabilidad",
+    "yrs": "años",
+    "annualIncome": "Facturación anual",
+    "monthlyNet": "Neto mensual (€)",
+    "income": "Facturación",
+    "employee": "Asalariado",
+    "autonomo": "Autónomo",
+    "sl": "Sociedad Limitada",
+    "amount": "Cantidad",
+    "salary": "Salario bruto (€)",
+    "netIncome": "Renta neta",
+    "totalTaxes": "Impuestos totales",
+    "optimal": "Óptimo",
+    "years": "Años",
+    "year": "Año"
+  },
+  "units": {
+    "years": "años",
+    "eur_year": "€ / año",
+    "eur": "€",
+    "decimal": "decimal"
+  },
+  "input": {
+    "advanced": "Opciones avanzadas"
+  },
+  "article": {
+    "kicker": "Análisis fiscal",
+    "title": "SL vs Autónomo: Comparativa Completa",
+    "subtitle": "Simulación detallada de la carga fiscal según tu nivel de ingresos y estructura empresarial.",
+    "meta": "Datos fiscales 2025 · Simulación orientativa",
+    "toc": {
+      "title": "Índice",
+      "objective": "Objetivo",
+      "method": "Metodología",
+      "assumptions": "Hipótesis",
+      "step1": "Paso 1: Comparativa simple",
+      "step2": "Paso 2: Resultados detallados",
+      "visuals": "Visualizaciones",
+      "details": "Detalles por escenario"
+    },
+    "objective": {
+      "title": "Objetivo",
+      "body": "Determinar cuál estructura fiscal —autónomo o Sociedad Limitada— resulta más ventajosa para un mismo nivel de facturación, teniendo en cuenta todos los impuestos y cotizaciones obligatorias.",
+      "points": {
+        "1": "Calcular la renta neta disponible en cada escenario.",
+        "2": "Identificar el punto de cruce donde una opción supera a la otra.",
+        "3": "Visualizar el impacto a largo plazo con inversión del ahorro fiscal."
+      }
+    },
+    "method": {
+      "title": "Metodología",
+      "body": "Utilizamos los tramos y tipos impositivos vigentes para calcular la carga fiscal completa de cada régimen. Los cálculos incluyen:",
+      "points": {
+        "1": "IRPF estatal y autonómico con tramos progresivos actualizados.",
+        "2": "Cuotas de la Seguridad Social (régimen general y autónomos).",
+        "3": "Impuesto de Sociedades, retención de dividendos y doble imposición."
+      }
+    },
+    "assumptions": {
+      "title": "Hipótesis",
+      "points": {
+        "1": "Residente fiscal en España durante todo el ejercicio.",
+        "2": "Sin deducciones especiales (discapacidad, familia numerosa, etc.).",
+        "3": "El 100% del beneficio neto de la SL se reparte como dividendos."
+      }
+    },
+    "simple": {
+      "title": "Paso 1: Comparativa simple",
+      "body": "A continuación se muestra una comparativa rápida del neto mensual estimado bajo cada régimen para la facturación indicada.",
+      "autonomo": "Autónomo — neto mensual",
+      "sl": "SL — neto mensual",
+      "delta": "Diferencia mensual",
+      "note": "Valores orientativos. Ajusta los parámetros en el panel lateral para personalizar la simulación.",
+      "verdict": {
+        "sl": "La SL es más ventajosa para este nivel de ingresos.",
+        "autonomo": "El régimen de autónomo es más ventajoso para este nivel de ingresos.",
+        "neutral": "Ambos regímenes ofrecen un resultado similar."
+      }
+    },
+    "results": {
+      "title": "Paso 2: Resultados detallados",
+      "body": "A continuación se muestran los resultados completos desglosados por concepto fiscal para cada escenario simulado."
+    },
+    "sections": {
+      "capital": "Evolución del capital acumulado",
+      "tax": "Desglose fiscal comparado",
+      "sensitivity": "Sensibilidad: capital final",
+      "details": "Detalle por escenario"
+    }
+  },
+  "rates": {
+    "effective": "Tipo efectivo",
+    "marginal": "Tipo marginal"
+  },
+  "brackets": {
+    "detail_title": "Ver detalle IRPF por tramos",
+    "range": "Tramo",
+    "rate": "Tipo",
+    "base": "Base imponible",
+    "tax": "Cuota",
+    "total": "Total IRPF",
+    "effective": "Tipo efectivo"
+  },
+  "presets": {
+    "title": "Perfiles frecuentes"
+  },
+  "disclaimer": "Este simulador tiene carácter orientativo y educativo. Los resultados son aproximados y no constituyen asesoramiento fiscal profesional. Consulta siempre con un asesor cualificado antes de tomar decisiones fiscales. Datos actualizados a enero 2025.",
+  "footer": {
+    "datos": "Datos fiscales 2025"
+  },
+  "meta": {
+    "home": {
+      "title": "Inicio",
+      "desc": "Simulador fiscal de España: calcula tu sueldo neto como asalariado, autónomo o SL"
+    },
+    "employee": {
+      "title": "Calculadora de Asalariado",
+      "desc": "Calcula tu sueldo neto mensual a partir de tu salario bruto anual"
+    },
+    "autonomo": {
+      "title": "Calculadora de Autónomo",
+      "desc": "Calcula tu ingreso neto como autónomo tras impuestos y cuota"
+    },
+    "sl": {
+      "title": "Calculadora de Sociedad Limitada",
+      "desc": "Simula la fiscalidad de tu SL: impuesto de sociedades, salario y dividendos"
+    },
+    "comparator": {
+      "title": "Comparador de Regímenes",
+      "desc": "Compara los tres regímenes fiscales y simula tu inversión a largo plazo"
+    },
+    "investment_sim": {
+      "title": "Simulador de Inversión",
+      "desc": "Optimiza tu estrategia de inversión como autónomo o SL"
+    }
+  },
+  "investment_sim": {
+    "title": "Simulador de Inversión: Autónomo vs SL",
+    "intro": {
+      "p1": "Una de las decisiones fiscales más importantes para un profesional independiente es cómo estructurar sus ingresos para maximizar su patrimonio a largo plazo. No basta con comparar el neto mensual: hay que considerar cómo se invierte el excedente y cómo tributa cada euro al rescatarlo.",
+      "p2": "Este simulador compara dos caminos: ser autónomo e invertir personalmente el excedente, o constituir una SL donde parte del beneficio se retiene e invierte dentro de la empresa. La SL permite diferir impuestos (solo pagas IS al 25% vs IRPF marginal al 37-47%), pero al rescatar como dividendos se paga una segunda capa. ¿Cuál es el punto óptimo?"
+    },
+    "calculator": {
+      "title": "Parámetros de la simulación",
+      "billing": "Facturación anual bruta",
+      "expenses": "Gastos personales mensuales",
+      "region": "Comunidad Autónoma",
+      "return": "Rentabilidad anual esperada",
+      "years": "Horizonte de inversión (años)",
+      "initial_capital": "Capital inicial",
+      "advanced": "Opciones avanzadas",
+      "deductible": "Gastos deducibles autónomo (%)",
+      "tarifa_plana": "Tarifa plana de autónomos",
+      "company_expenses": "Gastos empresa (€/año)",
+      "gestoria": "Gastos gestoría (€/año)",
+      "company_type": "Tipo de empresa"
+    },
+    "result": {
+      "optimal_sl": "Tu estrategia óptima: SL con salario de {{salary}}/año",
+      "optimal_autonomo": "Tu estrategia óptima: Autónomo",
+      "advantage": "{{amount}} más que la peor alternativa",
+      "chart_title": "Capital final neto según salario del administrador",
+      "monthly_invest": "Inversión mensual",
+      "min_salary": "Salario mínimo",
+      "optimal_label": "Óptimo",
+      "salary_label": "Salario",
+      "capital_personal": "Capital personal",
+      "capital_empresa": "Capital empresa (neto tras dividendos)",
+      "capital_total": "Capital total neto",
+      "after_years": "Capital final tras {{years}} años",
+      "evolution_title": "Evolución del capital acumulado"
+    },
+    "learn": {
+      "why_sl": {
+        "title": "¿Por qué la SL puede ser mejor para invertir?",
+        "content": "La principal ventaja de invertir a través de una SL es el diferimiento fiscal. Como autónomo, pagas IRPF (hasta el 47%) sobre todo tu rendimiento neto y luego inviertes lo que queda. Con una SL, el beneficio empresarial tributa al 25% de Impuesto de Sociedades (o 15% si es empresa nueva), y el 75% restante se puede reinvertir sin pagar más impuestos hasta que lo retires como dividendos.\nEsto significa que con una SL tienes más capital trabajando para ti desde el principio. Si ganas 100.000€ netos, como autónomo quizás inviertas 40.000€ tras impuestos, pero como SL podrías tener 75.000€ invertidos (pagando solo IS). A un 7% anual, esa diferencia inicial se multiplica exponencialmente gracias al interés compuesto.\nEl coste del diferimiento es que al rescatar los fondos como dividendos pagarás IRPF del ahorro (19-28%). Pero el efecto del interés compuesto sobre una base mayor durante muchos años suele compensar con creces esa segunda capa de tributación.\nEste simulador calcula exactamente el punto de equilibrio: para qué nivel de ingresos, gastos y horizonte temporal merece la pena cada estructura."
+      },
+      "dividends": {
+        "title": "Tributación de dividendos vs plusvalías personales",
+        "content": "Cuando inviertes como persona física (autónomo), tus ganancias tributan por el IRPF del ahorro al vender: 19% hasta 6.000€, 21% hasta 50.000€, 23% hasta 200.000€, 27% hasta 300.000€ y 28% en adelante. Solo pagas impuestos sobre las plusvalías (ganancia), no sobre el capital aportado.\nCuando retiras dinero de tu SL como dividendos, tributas sobre el importe total del dividendo a los mismos tipos del ahorro. Pero recuerda que ese dinero ya pagó un 25% de IS. El tipo efectivo combinado sobre dividendos es: 1 - (1-0.25)×(1-tipo_ahorro). Para los primeros 6.000€ esto supone un 39,25% combinado.\nLa diferencia clave es que como persona física solo pagas impuestos sobre las ganancias, mientras que los dividendos de la SL tributan sobre el total distribuido. Sin embargo, la base sobre la que se acumulan los rendimientos es mayor en la SL gracias al diferimiento del IRPF.\nEl resultado neto depende de tres factores: el horizonte temporal (cuanto más largo, más favorece a la SL), la rentabilidad (mayor rentabilidad amplifica la ventaja del diferimiento), y tu tipo marginal de IRPF (cuanto más alto, más ventaja tiene la SL)."
+      },
+      "deferral": {
+        "title": "El efecto del diferimiento fiscal",
+        "content": "El diferimiento fiscal es el concepto más poderoso de la planificación patrimonial. Consiste en posponer el pago de impuestos para que tu dinero siga generando rendimientos antes de que Hacienda se lleve su parte.\nImagina que ganas 50.000€ de beneficio. Como autónomo al 37% marginal, te quedan 31.500€ para invertir. Como SL al 25% IS, te quedan 37.500€. Ambos invierten al 7% durante 20 años:\n- Autónomo: 31.500€ × (1.07)^20 = 121.874€. Plusvalías: 90.374€. IRPF ahorro (~21%): 18.979€. Neto: 102.895€.\n- SL: 37.500€ × (1.07)^20 = 145.088€. Dividendos: 145.088€. IRPF ahorro (~22%): 31.919€. Neto: 113.169€.\nLa SL genera 10.274€ más (un 10% adicional) gracias al diferimiento, a pesar de la doble imposición. Y este efecto se amplifica cuanto mayor sea el horizonte temporal y la rentabilidad.\nPor eso este simulador no da una respuesta simple de SL o autónomo: el óptimo depende de tus circunstancias. Pero en general, para ingresos altos con horizonte largo, el diferimiento fiscal de la SL es una herramienta muy potente."
+      }
+    }
+  }
+}

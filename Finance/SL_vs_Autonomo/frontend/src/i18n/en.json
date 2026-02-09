@@ -1,0 +1,499 @@
+{
+  "app": {
+    "title": "Fiscal Simulator"
+  },
+  "nav": {
+    "home": "Home",
+    "employee": "Employee",
+    "autonomo": "Self-Employed",
+    "sl": "Limited Company",
+    "comparator": "Comparator",
+    "investment_sim": "Investment",
+    "language": "Language",
+    "link": {
+      "employee": "Employee Calculator",
+      "autonomo": "Self-Employed Calculator",
+      "sl": "SL Calculator",
+      "comparator": "Regime Comparator"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Spain Fiscal Simulator",
+      "subtitle": "Calculate your taxes as an employee, self-employed worker, or through a Limited Company. Compare scenarios and make informed decisions about your tax structure."
+    },
+    "card": {
+      "employee": {
+        "title": "Employee",
+        "desc": "Calculate your net salary from gross. Includes income tax (IRPF), Social Security, and regional deductions."
+      },
+      "autonomo": {
+        "title": "Self-Employed",
+        "desc": "Estimate your net income as a freelancer. Includes self-employed social security, income tax, and deductible expenses."
+      },
+      "sl": {
+        "title": "Limited Company",
+        "desc": "Simulate the taxation of a Limited Company: Corporate Tax, director salary, dividends, and double taxation."
+      },
+      "comparator": {
+        "title": "Comparator",
+        "desc": "Compare all three tax structures side by side for the same income level and discover which one is most efficient."
+      },
+      "investment": {
+        "title": "Investment Simulator",
+        "desc": "Long-term simulation of capital accumulation as self-employed vs through an SL, with corporate tax advantage."
+      }
+    },
+    "footer": "Spain Fiscal Simulator — Open-source educational project"
+  },
+  "employee": {
+    "title": "Employee Calculator",
+    "intro": {
+      "p1": "If you work as an employee in Spain, your company pays you a gross salary from which taxes and social contributions are deducted before the money reaches your bank account. Understanding how your payslip is calculated helps you evaluate job offers and plan your finances.",
+      "p2": "Your gross salary is reduced mainly by two items: Social Security contributions (around 6.35% of your base) and income tax withholding (IRPF). The IRPF is progressive: the first euros are taxed at a low rate, and as you earn more, higher brackets pay a larger percentage.",
+      "p3": "Additionally, each autonomous community can have slightly different regional tax brackets, meaning your net pay can vary depending on where you live. This calculator accounts for all these variables to give you an accurate estimate."
+    },
+    "calculator": {
+      "title": "Employee details",
+      "salary": "Annual gross salary",
+      "region": "Autonomous Community",
+      "pagas": "Number of payments",
+      "pagas_label": "payments",
+      "advanced": "Advanced options",
+      "advanced_placeholder": "Coming soon: personal deductions, disability, family situation, etc."
+    },
+    "result": {
+      "net_monthly": "Monthly net salary",
+      "per_year": "/ year",
+      "employer_cost": "Cost to the company",
+      "employer_cost_subtitle": "Gross salary + Employer Social Security",
+      "breakdown": "Payslip breakdown",
+      "employer_breakdown_title": "Employer cost breakdown"
+    },
+    "learn": {
+      "irpf": {
+        "title": "What is IRPF and how do tax brackets work?",
+        "content": "IRPF (Impuesto sobre la Renta de las Personas Físicas) is Spain's personal income tax and the main tax paid by workers. It is a progressive tax, meaning not all your income is taxed at the same rate. Instead, your income is divided into brackets, each with a different tax rate.\nFor example, the first 12,450 euros are taxed at 19%, the next portion (up to 20,200 euros) at 24%, and so on up to a maximum rate of 47% for income above 300,000 euros. This means that if you earn 30,000 euros, you do not pay 30% on everything: the first euros are taxed very little and only the last euros are taxed at the highest rate.\nIn addition to the national brackets, each autonomous community has its own regional brackets that are added to the national ones. This means two people with the same salary can have slightly different withholdings depending on where they live. Madrid, for instance, has lower regional rates than Catalonia or Andalusia.\nIt is important to distinguish between your marginal rate (the percentage you pay on your last euro earned) and your effective rate (the actual average percentage across all your income). Your effective rate will always be lower than your marginal rate thanks to the progressive structure of the tax."
+      },
+      "pagas": {
+        "title": "14 vs 12 payments: what is the difference?",
+        "content": "In Spain, it is common to receive your salary split into 14 payments instead of 12. The two extra payments are usually paid in June and December and are known as extraordinary payments (pagas extraordinarias). This does not change your annual gross salary or the total taxes you pay, but it does affect the amount you receive each month.\nWith 14 payments, each monthly paycheck is smaller (your annual gross divided by 14), but you receive two additional lump sums per year that many people use for extraordinary expenses like holidays or Christmas. With 12 payments, each month you receive a larger amount (your annual gross divided by 12), which makes monthly budgeting easier.\nFrom a tax perspective, the final result is identical: you pay the same taxes and social contributions per year. The difference is purely a matter of cash flow. Some companies let you choose between the two options, while many collective agreements set 14 payments as the default.\nIf you prefer more regular control over your finances and want to avoid the temptation of spending the extras, 12 payments may be more convenient. If you value having an extra cushion twice a year, 14 payments are the traditional choice."
+      },
+      "employer": {
+        "title": "What does your employer really pay for you?",
+        "content": "The gross salary on your contract is not the total cost your company bears for having you on payroll. On top of your gross salary, the company pays employer social security contributions, which amount to approximately 30-33% extra on top of your contribution base.\nThese employer contributions cover common contingencies (23.60%), unemployment (5.50% for permanent contracts), professional training (0.60%), and the Wage Guarantee Fund or FOGASA (0.20%). In total, if your gross salary is 30,000 euros, your employer is paying around 39,000-40,000 euros total between your salary and their contributions.\nThis matters for several reasons. When you negotiate your salary, the company thinks in terms of total cost, not just your gross. If you ask for a 3,000 euro gross raise, the real cost to the company is around 4,000 euros. Similarly, when comparing being an employee versus self-employed, you should consider that part of your social protection is being financed by your employer.\nUnderstanding this total cost gives you a more realistic perspective on the value of your job and helps you negotiate more effectively."
+      }
+    }
+  },
+  "autonomo": {
+    "title": "Self-Employed Calculator",
+    "intro": {
+      "p1": "A self-employed worker (autónomo) in Spain invoices clients directly and is responsible for paying their own taxes and social contributions. Unlike an employee, freelancers can deduct expenses necessary for their business before calculating income tax.",
+      "p2": "The main fixed obligation is the self-employed social security contribution, which since 2023 is calculated based on net income brackets. New self-employed workers can benefit from the flat rate (80 euros/month for the first year, extendable). After deducting expenses and contributions, net income is subject to progressive IRPF."
+    },
+    "reverse": {
+      "title": "Reverse calculator",
+      "desc": "How much do you need to bill to reach your target net salary?",
+      "target": "Target net salary",
+      "result_label": "You need to bill"
+    },
+    "calculator": {
+      "title": "Self-employed details",
+      "billing": "Annual revenue",
+      "region": "Autonomous Community",
+      "cuota": "Self-employed contribution (EUR/month)",
+      "cuota_tarifa_plana": "Flat rate (80 €/month)",
+      "cuota_normal": "Normal (by brackets)",
+      "cuota_custom": "Custom",
+      "advanced": "Advanced options",
+      "expenses": "Deductible expenses (EUR/year)"
+    },
+    "result": {
+      "net_monthly": "Monthly net income",
+      "per_year": "/ year",
+      "salary_equiv": "Equivalent gross employee salary",
+      "breakdown": "Income breakdown"
+    },
+    "learn": {
+      "cuota": {
+        "title": "What is the self-employed social security contribution?",
+        "content": "The self-employed contribution (cuota de autónomos) is the mandatory monthly payment every self-employed worker in Spain must make to Social Security. Since 2023, Spain introduced an income-based contribution system that replaced the old system where freelancers could freely choose their contribution base.\nUnder this new system, your monthly contribution depends on your actual net income. The brackets range from around 230 euros per month for low net income (less than 670 euros/month) to over 500 euros per month for income above 6,000 euros monthly. The system is being phased in gradually through 2025, with contributions adjusting each year.\nThis contribution gives you access to benefits including healthcare, retirement pension, temporary disability (sick leave), cessation of activity benefit (the self-employed equivalent of unemployment), and occupational accident coverage. It is a fixed cost you must factor in when calculating your profitability.\nUnlike an employee, where the company pays the majority of social contributions, as a self-employed worker you bear 100% of your contribution. This is why it is essential to include it in your calculations when setting your rates and budgets."
+      },
+      "deductions": {
+        "title": "What expenses can you deduct as self-employed?",
+        "content": "One of the main advantages of being self-employed is the ability to deduct expenses necessary for your professional activity before calculating income tax. This reduces your tax base and therefore the taxes you pay. However, the tax authority (Hacienda) requires that expenses be directly linked to your activity and properly documented with invoices.\nThe most common deductible expenses include: your self-employed social security contribution, office or premises rent, utilities (electricity, water, internet if you work from home at 30% of the proportional share), office supplies, professional services (accountant, lawyer), training related to your activity, professional insurance, equipment depreciation (computer, tools), justified meals and travel, and professional association fees.\nIf you work from home, you can deduct a proportional share of your housing expenses based on the square meters dedicated to your business. This deduction is capped at 30% of the affected proportion of square meters. You can also recover the VAT paid on professional purchases through your quarterly VAT returns.\nIt is crucial to maintain orderly accounting and keep all invoices for at least four years. A common mistake is deducting personal expenses as business ones, which can result in penalties during a tax inspection. When in doubt, consult your accountant."
+      },
+      "tarifa": {
+        "title": "Self-employed flat rate: how it works",
+        "content": "The flat rate (tarifa plana) is a subsidy for new self-employed workers that significantly reduces the Social Security contribution during the first months of activity. Currently, new freelancers pay a reduced contribution of 80 euros per month for the first 12 months, regardless of their income.\nThis subsidy can be extended for another 12 months (24 months total) if your net income during the first year does not exceed the Minimum Interprofessional Salary (SMI). This represents a considerable saving, since the minimum ordinary contribution is around 230 euros per month. In total, you can save between 1,800 and 3,600 euros in your first one or two years.\nTo qualify for the flat rate you must meet certain requirements: you must not have been registered as self-employed in the previous two years (three years if you previously received this subsidy), and you must register under the Special Regime for Self-Employed Workers (RETA). It is not compatible with being a collaborating family member self-employed worker.\nThe flat rate is an excellent tool for reducing fixed costs at the start of your activity, when income is usually more uncertain. However, remember that during this period you are also contributing at the minimum base, which affects your future benefits such as retirement pension or sick leave payments."
+      }
+    }
+  },
+  "sl": {
+    "title": "Limited Company Calculator",
+    "intro": {
+      "p1": "A Limited Company (SL - Sociedad Limitada) is a business structure where the company has its own legal personality. As director and shareholder, you can receive a salary (taxed under IRPF like an employee) and distribute dividends from the remaining profit (taxed under Corporate Tax and then under savings IRPF).",
+      "p2": "The main advantage of an SL is that Corporate Tax has a fixed rate (25%, or 15% for newly created companies in their first two years), generally lower than the marginal IRPF rate for high incomes. However, if you want to access the profit as an individual, you will pay a second layer of taxes on dividends."
+    },
+    "calculator": {
+      "title": "Limited Company details",
+      "billing": "Annual SL revenue",
+      "salary": "Director salary",
+      "region": "Autonomous Community",
+      "advanced": "Advanced options",
+      "company_expenses": "Other company expenses (EUR/year)",
+      "gestoria": "Accounting fees (EUR/year)",
+      "company_type": "Company type",
+      "type_normal": "Standard company (CT 25%)",
+      "type_nueva": "Newly created (CT 15%)",
+      "type_reducida": "Reduced rate",
+      "dividends_pct": "Dividend distribution percentage"
+    },
+    "result": {
+      "net_monthly": "Total monthly net income",
+      "net_monthly_subtitle": "Net salary + net dividends",
+      "optimal_salary": "Optimal director salary",
+      "breakdown": "Income breakdown"
+    },
+    "learn": {
+      "is": {
+        "title": "What is Corporate Tax (Impuesto de Sociedades)?",
+        "content": "Corporate Tax (Impuesto de Sociedades or IS) is the tax levied on company profits in Spain. Unlike personal income tax (IRPF), which is progressive with rates from 19% to 47%, Corporate Tax has a general flat rate of 25%. For newly created companies, the rate is reduced to 15% during the first two fiscal years with a positive tax base.\nThe taxable base for Corporate Tax is calculated by subtracting all deductible business expenses from income: salaries (including the director's salary), rent, utilities, accounting fees, depreciation, insurance, and any expenses necessary for the business. This means that the salary you assign yourself as director directly reduces the profit subject to Corporate Tax.\nCorporate Tax is filed annually (form 200) with quarterly advance payments (form 202). The advance payments amount to 18% of the previous year's tax liability or, alternatively, 17% of the current quarter's profit. The annual return is due in July of the following year.\nFor a single-member SL, the tax strategy involves balancing the director's salary (taxed under progressive IRPF) with the corporate profit (taxed at the flat Corporate Tax rate). The key is finding the optimal combination that minimizes the overall tax burden."
+      },
+      "doble": {
+        "title": "Double taxation on dividends explained",
+        "content": "Double taxation is one of the most important concepts to understand when operating through a Limited Company. It occurs because the same corporate profit is taxed twice: first at the company level (Corporate Tax) and then at the personal level when you distribute that profit as dividends (savings IRPF).\nHere is an example: if your SL generates 100,000 euros in profit before Corporate Tax, it pays 25% CT (25,000 euros), leaving 75,000 euros of net profit. When you distribute those 75,000 euros as dividends, you pay savings IRPF: 19% on the first 6,000 euros, 21% up to 50,000 euros, 23% up to 200,000 euros, and 27% above that. On those 75,000 euros you would pay approximately 15,750 euros in additional IRPF.\nIn total, from the original 100,000 euros you would have paid 25,000 + 15,750 = 40,750 euros in taxes, resulting in a combined effective rate of 40.75%. This effective rate is similar to or even higher than the IRPF marginal rate for income of that amount if you were self-employed.\nThis is why an SL is not always more advantageous than the self-employed regime. The real advantage appears when you can keep part of the profit inside the company (to reinvest or as a financial cushion) without distributing it as dividends, thereby avoiding the second layer of taxation."
+      },
+      "when": {
+        "title": "When does it make sense to set up an SL?",
+        "content": "The decision to incorporate a Limited Company depends on several factors, not just taxes. From a tax perspective, an SL starts to become attractive when your net income as a freelancer exceeds 40,000-50,000 euros per year, since at that level the IRPF marginal rate (37%-45%) significantly exceeds the Corporate Tax rate (25% or 15%).\nHowever, an SL carries fixed costs you must account for: specialized corporate accounting (between 150 and 300 euros per month), the initial incorporation (around 600-1,500 euros for notary and registry), the minimum share capital of 1 euro (although traditionally 3,000 euros was contributed), the obligation to maintain commercial accounting, file annual accounts at the Commercial Registry, and submit the Corporate Tax return.\nThe main non-tax advantages of an SL include: limited liability restricted to the contributed capital (your personal assets are protected), greater credibility with clients and suppliers, ease of bringing in partners or investors, and the ability to plan taxation over time by keeping profits in the company.\nAs a general rule, if you invoice less than 40,000 euros per year, the self-employed regime is usually simpler and cheaper. Between 40,000 and 80,000 euros, it is worth running the numbers with an advisor. Above 80,000-100,000 euros, an SL is usually clearly advantageous, especially if you do not need to access all the profit every year."
+      }
+    }
+  },
+  "comparator": {
+    "title": "Tax Regime Comparator",
+    "intro": {
+      "p1": "This comparator lets you see, for the same income level, how much you would keep as an employee, as a self-employed worker, or invoicing through a Limited Company. It is the ideal tool to decide which tax structure best suits your situation.",
+      "p2": "Keep in mind that each regime has advantages and disadvantages beyond pure taxation: an employee has greater labor protection, a self-employed worker has full flexibility, and an SL offers limited liability but comes with fixed management costs."
+    },
+    "income": {
+      "title": "Income level",
+      "annual": "Annual gross income",
+      "region": "Autonomous Community"
+    },
+    "comparison": {
+      "title": "Comparison results",
+      "best_label": "Best option",
+      "crossover_title": "Crossover point by income level",
+      "net_title": "Net monthly income by regime"
+    },
+    "best": {
+      "label": "Best option for your income level",
+      "saves": "You save",
+      "vs_worst": "compared to the worst option"
+    },
+    "qualitative": {
+      "title": "Qualitative comparison",
+      "aspect": "Aspect",
+      "employee": "Employee",
+      "autonomo": "Self-Employed",
+      "sl": "Limited Company",
+      "vacation": {
+        "label": "Vacation & Time Off",
+        "employee": "30 days paid vacation + public holidays",
+        "autonomo": "No guaranteed vacation; you don't work, you don't earn",
+        "sl": "No guaranteed vacation; same as self-employed when not working"
+      },
+      "unemployment": {
+        "label": "Unemployment Protection",
+        "employee": "Eligible for unemployment benefit (prestación desempleo)",
+        "autonomo": "Limited cessation benefit (cese de actividad); reduced coverage",
+        "sl": "Depends on director salary classification and contributions"
+      },
+      "pension": {
+        "label": "Retirement Contributions",
+        "employee": "Employer+employee fund General Regime contributions",
+        "autonomo": "Self-funded RETA contributions; flexible but 100% your cost",
+        "sl": "Director contributions similar to employee; flexible for adjustments"
+      },
+      "flexibility": {
+        "label": "Schedule & Work Flexibility",
+        "employee": "Fixed schedule; limited flexibility",
+        "autonomo": "Complete flexibility; you set your own hours and rates",
+        "sl": "Flexible schedule but must manage administrative duties"
+      },
+      "costs": {
+        "label": "Administrative Costs",
+        "employee": "Zero; employer handles all admin",
+        "autonomo": "Low to moderate; accounting fees around 50-100 EUR/month",
+        "sl": "Highest; accounting, registry, annual filings: 150-300+ EUR/month"
+      },
+      "difficulty": {
+        "label": "Complexity & Compliance",
+        "employee": "Simplest; employer handles payroll and taxes",
+        "autonomo": "Moderate; quarterly VAT, annual tax return, record-keeping",
+        "sl": "Most complex; statutory accounts, corporate tax, compliance reporting"
+      }
+    },
+    "investment": {
+      "title": "Long-term investment simulation",
+      "intro": "Compare how the monthly savings from each regime would accumulate when invested over time.",
+      "params": "Investment parameters",
+      "expenses": "Monthly expenses",
+      "return": "Expected annual return (%)",
+      "years": "Investment horizon (years)",
+      "capital_evolution": "Accumulated capital evolution",
+      "sensitivity_title": "Sensitivity: final capital by return rate and horizon",
+      "year_detail": "View year-by-year detail",
+      "year": "Year",
+      "after_years": "after {{years}} years"
+    },
+    "learn": {
+      "4pct": {
+        "title": "The 4% rule and financial independence",
+        "content": "The 4% rule is a widely used principle in financial planning that states you can withdraw 4% of your investment portfolio each year without depleting your capital over 30 years or more. This rule is based on the 1998 Trinity Study, which analyzed historical U.S. market data.\nIn practice, this means that if you need 2,000 euros per month (24,000 euros per year) to live, you would need to accumulate 600,000 euros (24,000 / 0.04). From that point, you could stop working and live off the returns of your investment, adjusting the annual withdrawal for inflation.\nThis rule is useful as a benchmark, but it has limitations. It is based on historical data from developed markets and does not guarantee future results. It also assumes a diversified portfolio of stocks and bonds. In low-return or high-inflation environments, a withdrawal rate of 3-3.5% may be more prudent.\nIn the context of this comparator, the difference in monthly savings between tax regimes accumulates significantly over time. Choosing the most tax-efficient structure can advance your financial independence by several years."
+      },
+      "marginal": {
+        "title": "Marginal rate vs effective rate",
+        "content": "Understanding the difference between marginal and effective tax rates is essential for making informed tax decisions. The marginal rate is the percentage of taxes you pay on your last euro earned, determined by the highest IRPF bracket you reach. The effective rate is the actual average percentage you pay across all your income.\nFor example, if you earn 40,000 euros, your marginal rate might be 37% (the bracket for income between 35,200 and 60,000 euros), but your effective rate would be around 22%, because the first euros were taxed at much lower rates (19%, 24%, 30%).\nThis distinction is key when comparing tax regimes. When someone says that Corporate Tax at 25% is better than IRPF at 37%, they are comparing a flat rate with a marginal rate, which is misleading. The correct comparison must consider the total effective rate including, in the case of an SL, the double taxation on dividends.\nIn this comparator, we calculate the real effective rate for each regime taking into account all layers of taxation. This allows you to make a fair comparison and base your decisions on actual data, not isolated percentages that can lead to incorrect conclusions."
+      },
+      "compound": {
+        "title": "The power of compound interest in tax savings",
+        "content": "Compound interest is the mechanism by which the returns on your investment generate their own returns in turn. In the context of taxation, small differences in monthly savings between regimes are enormously amplified over time thanks to this effect.\nImagine that the most tax-efficient regime saves you 300 euros per month compared to the least efficient. In one year that is 3,600 euros, a modest difference. But if you invest that difference monthly at a 7% annual return over 20 years, you would accumulate more than 150,000 euros in additional wealth. Over 30 years, you would exceed 350,000 euros.\nThe key to compound interest is time. The sooner you optimize your tax structure and begin investing the savings, the greater the multiplier effect. One euro saved and invested at age 30 is worth far more than one saved at 50 due to the cumulative effect of decades of compounded returns.\nThis is why this comparator includes a long-term investment simulation. It is not enough to compare the monthly net income of each regime: you need to visualize the cumulative impact over your professional career. The tax structure you choose today can make a difference of hundreds of thousands of euros in your future wealth."
+      }
+    }
+  },
+  "sidebar": {
+    "title": "Parameters",
+    "region": "Autonomous Community",
+    "presets": "Presets",
+    "income": {
+      "facturacion": "Annual revenue",
+      "gastos_deducibles": "Deductible expenses",
+      "gastos_personales": "Personal expenses",
+      "aportacion_plan_pensiones": "Pension plan contribution"
+    },
+    "company": {
+      "salario_administrador": "Director salary",
+      "gastos_gestoria": "Accounting fees",
+      "turnover": "Business turnover",
+      "company_age": "Company age",
+      "is_startup": "Newly created company"
+    },
+    "investment": {
+      "capital_inicial": "Initial capital",
+      "rentabilidad": "Annual return"
+    },
+    "horizon": {
+      "años": "Time horizon",
+      "tarifa_plana": "Self-employed flat rate"
+    },
+    "simulate": "Simulate",
+    "income_title": "Income",
+    "company_title": "Company",
+    "investment_title": "Investment",
+    "horizon_title": "Horizon"
+  },
+  "results": {
+    "best": "Best option",
+    "monthly": "Monthly net"
+  },
+  "table": {
+    "metric": "Metric",
+    "ingreso_bruto": "Gross income",
+    "seguridad_social": "Social Security",
+    "irpf": "IRPF",
+    "impuesto_sociedades": "Corporate Tax",
+    "neto_anual": "Annual net",
+    "neto_mensual": "Monthly net",
+    "tipo_efectivo": "Effective rate"
+  },
+  "charts": {
+    "returnRate": "Return rate",
+    "yrs": "years",
+    "annualIncome": "Annual revenue",
+    "monthlyNet": "Monthly net (EUR)",
+    "income": "Revenue",
+    "employee": "Employee",
+    "autonomo": "Self-Employed",
+    "sl": "Limited Company",
+    "amount": "Amount",
+    "salary": "Gross salary (EUR)",
+    "netIncome": "Net income",
+    "totalTaxes": "Total taxes",
+    "optimal": "Optimal",
+    "years": "Years",
+    "year": "Year"
+  },
+  "units": {
+    "years": "years",
+    "eur_year": "EUR / year",
+    "eur": "EUR",
+    "decimal": "decimal"
+  },
+  "input": {
+    "advanced": "Advanced options"
+  },
+  "article": {
+    "kicker": "Tax analysis",
+    "title": "SL vs Self-Employed: Full Comparison",
+    "subtitle": "Detailed simulation of the tax burden based on your income level and business structure.",
+    "meta": "2025 tax data — Indicative simulation",
+    "toc": {
+      "title": "Table of Contents",
+      "objective": "Objective",
+      "method": "Methodology",
+      "assumptions": "Assumptions",
+      "step1": "Step 1: Simple comparison",
+      "step2": "Step 2: Detailed results",
+      "visuals": "Visualizations",
+      "details": "Scenario details"
+    },
+    "objective": {
+      "title": "Objective",
+      "body": "Determine which tax structure — self-employed or Limited Company — is more advantageous for the same revenue level, taking into account all taxes and mandatory contributions.",
+      "points": {
+        "1": "Calculate the available net income in each scenario.",
+        "2": "Identify the crossover point where one option surpasses the other.",
+        "3": "Visualize the long-term impact of investing the tax savings."
+      }
+    },
+    "method": {
+      "title": "Methodology",
+      "body": "We use the current tax brackets and rates to calculate the full tax burden of each regime. The calculations include:",
+      "points": {
+        "1": "National and regional IRPF with updated progressive brackets.",
+        "2": "Social Security contributions (general regime and self-employed).",
+        "3": "Corporate Tax, dividend withholding, and double taxation."
+      }
+    },
+    "assumptions": {
+      "title": "Assumptions",
+      "points": {
+        "1": "Tax resident in Spain for the entire fiscal year.",
+        "2": "No special deductions (disability, large family, etc.).",
+        "3": "100% of the SL's net profit is distributed as dividends."
+      }
+    },
+    "simple": {
+      "title": "Step 1: Simple comparison",
+      "body": "Below is a quick comparison of the estimated monthly net income under each regime for the specified revenue.",
+      "autonomo": "Self-Employed — monthly net",
+      "sl": "SL — monthly net",
+      "delta": "Monthly difference",
+      "note": "Indicative values. Adjust the parameters in the side panel to customize the simulation.",
+      "verdict": {
+        "sl": "The Limited Company is more advantageous for this income level.",
+        "autonomo": "The self-employed regime is more advantageous for this income level.",
+        "neutral": "Both regimes offer a similar result."
+      }
+    },
+    "results": {
+      "title": "Step 2: Detailed results",
+      "body": "Below are the full results broken down by tax concept for each simulated scenario."
+    },
+    "sections": {
+      "capital": "Accumulated capital evolution",
+      "tax": "Comparative tax breakdown",
+      "sensitivity": "Sensitivity: final capital",
+      "details": "Scenario details"
+    }
+  },
+  "rates": {
+    "effective": "Effective rate",
+    "marginal": "Marginal rate"
+  },
+  "brackets": {
+    "detail_title": "View IRPF bracket breakdown",
+    "range": "Bracket",
+    "rate": "Rate",
+    "base": "Taxable base",
+    "tax": "Tax",
+    "total": "Total IRPF",
+    "effective": "Effective rate"
+  },
+  "presets": {
+    "title": "Common profiles"
+  },
+  "disclaimer": "This simulator is for informational and educational purposes only. Results are approximate and do not constitute professional tax advice. Always consult a qualified advisor before making tax decisions. Data updated to January 2025.",
+  "footer": {
+    "datos": "Tax data 2025"
+  },
+  "meta": {
+    "home": {
+      "title": "Home",
+      "desc": "Spanish tax simulator: calculate your net salary as employee, self-employed, or limited company"
+    },
+    "employee": {
+      "title": "Employee Calculator",
+      "desc": "Calculate your monthly net salary from your annual gross salary"
+    },
+    "autonomo": {
+      "title": "Self-Employed Calculator",
+      "desc": "Calculate your net income as self-employed after taxes and contributions"
+    },
+    "sl": {
+      "title": "Limited Company Calculator",
+      "desc": "Simulate your SL taxation: corporate tax, salary and dividends"
+    },
+    "comparator": {
+      "title": "Tax Regime Comparator",
+      "desc": "Compare all three tax regimes and simulate your long-term investment"
+    },
+    "investment_sim": {
+      "title": "Investment Simulator",
+      "desc": "Optimize your investment strategy as self-employed or limited company"
+    }
+  },
+  "investment_sim": {
+    "title": "Investment Simulator: Self-Employed vs Limited Company",
+    "intro": {
+      "p1": "One of the most important fiscal decisions for an independent professional is how to structure income to maximize long-term wealth. Comparing monthly net income is not enough: you need to consider how the surplus is invested and how each euro is taxed upon withdrawal.",
+      "p2": "This simulator compares two paths: being self-employed and investing the surplus personally, or setting up a limited company (SL) where part of the profit is retained and invested within the company. The SL allows tax deferral (you only pay 25% corporate tax vs 37-47% marginal IRPF), but when withdrawing as dividends there is a second tax layer. What is the optimal point?"
+    },
+    "calculator": {
+      "title": "Simulation parameters",
+      "billing": "Annual gross billing",
+      "expenses": "Monthly personal expenses",
+      "region": "Region",
+      "return": "Expected annual return",
+      "years": "Investment horizon (years)",
+      "initial_capital": "Initial capital",
+      "advanced": "Advanced options",
+      "deductible": "Self-employed deductible expenses (%)",
+      "tarifa_plana": "Self-employed flat rate",
+      "company_expenses": "Company expenses (EUR/year)",
+      "gestoria": "Accounting costs (EUR/year)",
+      "company_type": "Company type"
+    },
+    "result": {
+      "optimal_sl": "Your optimal strategy: SL with salary of {{salary}}/year",
+      "optimal_autonomo": "Your optimal strategy: Self-Employed",
+      "advantage": "{{amount}} more than the worst alternative",
+      "chart_title": "Net final capital by administrator salary",
+      "monthly_invest": "Monthly investment",
+      "min_salary": "Minimum salary",
+      "optimal_label": "Optimal",
+      "salary_label": "Salary",
+      "capital_personal": "Personal capital",
+      "capital_empresa": "Company capital (net after dividends)",
+      "capital_total": "Total net capital",
+      "after_years": "Final capital after {{years}} years",
+      "evolution_title": "Accumulated capital evolution"
+    },
+    "learn": {
+      "why_sl": {
+        "title": "Why can an SL be better for investing?",
+        "content": "The main advantage of investing through an SL is tax deferral. As self-employed, you pay IRPF (up to 47%) on all your net income and then invest what remains. With an SL, business profit is taxed at 25% corporate tax (or 15% for new companies), and the remaining 75% can be reinvested without paying more taxes until you withdraw it as dividends.\nThis means with an SL you have more capital working for you from the start. If you earn 100,000 EUR net, as self-employed you might invest 40,000 EUR after taxes, but as an SL you could have 75,000 EUR invested (paying only corporate tax). At 7% annually, this initial difference multiplies exponentially through compound interest.\nThe cost of deferral is that when you withdraw funds as dividends you will pay savings IRPF (19-28%). But the compound interest effect on a larger base over many years usually more than compensates for this second tax layer.\nThis simulator calculates exactly the break-even point: for what level of income, expenses and time horizon each structure is worthwhile."
+      },
+      "dividends": {
+        "title": "Dividend taxation vs personal capital gains",
+        "content": "When you invest as an individual (self-employed), your gains are taxed under savings IRPF when selling: 19% up to 6,000 EUR, 21% up to 50,000 EUR, 23% up to 200,000 EUR, 27% up to 300,000 EUR and 28% above. You only pay taxes on capital gains (profit), not on contributed capital.\nWhen you withdraw money from your SL as dividends, you pay tax on the total dividend amount at the same savings rates. But remember that money already paid 25% corporate tax. The combined effective rate on dividends is: 1 - (1-0.25) x (1-savings_rate). For the first 6,000 EUR this means a combined 39.25%.\nThe key difference is that as an individual you only pay taxes on gains, while SL dividends are taxed on the total distributed amount. However, the base on which returns accumulate is larger in the SL thanks to IRPF deferral.\nThe net result depends on three factors: time horizon (longer favors SL), return rate (higher return amplifies the deferral advantage), and your marginal IRPF rate (higher rate means more SL advantage)."
+      },
+      "deferral": {
+        "title": "The power of tax deferral",
+        "content": "Tax deferral is the most powerful concept in wealth planning. It consists of postponing tax payments so your money continues generating returns before the tax authority takes its share.\nImagine you earn 50,000 EUR in profit. As self-employed at 37% marginal rate, you have 31,500 EUR to invest. As SL at 25% corporate tax, you have 37,500 EUR. Both invest at 7% for 20 years:\n- Self-employed: 31,500 x (1.07)^20 = 121,874 EUR. Gains: 90,374 EUR. Savings IRPF (~21%): 18,979 EUR. Net: 102,895 EUR.\n- SL: 37,500 x (1.07)^20 = 145,088 EUR. Dividends: 145,088 EUR. Savings IRPF (~22%): 31,919 EUR. Net: 113,169 EUR.\nThe SL generates 10,274 EUR more (an additional 10%) thanks to deferral, despite double taxation. And this effect amplifies with longer time horizons and higher returns.\nThat is why this simulator does not give a simple SL or self-employed answer: the optimum depends on your circumstances. But in general, for high incomes with long horizons, the SL tax deferral is a very powerful tool."
+      }
+    }
+  }
+}
