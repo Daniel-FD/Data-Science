@@ -10,10 +10,5 @@
     "api/index.py": {
       "includeFiles": "backend/**"
     }
-  },
-  "build": {
-    "env": {
-      "NODE_VERSION": "20"
-    }
   }
 }
