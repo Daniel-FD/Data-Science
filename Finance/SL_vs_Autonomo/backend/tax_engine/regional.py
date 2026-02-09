@@ -257,19 +257,7 @@ def get_tramos_irpf_region(region: str) -> List[Tuple[float, float]]:
     boundaries = sorted(boundaries)
     boundaries.append(float("inf"))
 
-    # For each segment, find the applicable estatal + autonómica rate
-    combined = []
-    for boundary in boundaries:
-        # Find estatal rate at this boundary (use midpoint)
-        test_amount = boundary if boundary != float("inf") else (boundaries[-2] + 1 if len(boundaries) > 1 else 1)
-        mid = (0 if not combined else combined[-1][0] if combined[-1][0] != float("inf") else 0) + 0.01
-
-        e_rate = _find_marginal_rate(mid if boundary == boundaries[0] else (combined[-1][0] if combined and combined[-1][0] != float("inf") else 0) + 0.01, estatal)
-        a_rate = _find_marginal_rate(mid if boundary == boundaries[0] else (combined[-1][0] if combined and combined[-1][0] != float("inf") else 0) + 0.01, autonomica)
-
-        combined.append((boundary, e_rate + a_rate))
-
-    # Simplify: rebuild properly using boundary segments
+    # Build combined table using the computed boundaries
     return _build_combined_tramos(estatal, autonomica, boundaries)
 
 

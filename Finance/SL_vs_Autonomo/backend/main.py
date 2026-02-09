@@ -15,10 +15,13 @@ app = FastAPI(
     version="2.0.0",
 )
 
-# CORS for frontend dev server
+# CORS for frontend dev server and production
+# Note: Cannot use allow_credentials=True with wildcard origins
+import os
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000,https://fiscal.xelia.es").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "*"],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

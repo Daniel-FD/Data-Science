@@ -91,23 +91,41 @@ def calcular_cotizacion_solidaridad(salario_bruto_anual: float) -> float:
     cotizacion = 0.0
     restante = exceso
     max_base = SS_BASE_MAXIMA_ANUAL
+    prev_fraction = 0.0
 
     for fraction_limit, rate in SOLIDARIDAD_TRAMOS:
-        tramo_size = max_base * fraction_limit if fraction_limit != float("inf") else float("inf")
-        # Calculate how much of the previous fractions we've consumed
-        prev_limit = 0.0
-        if SOLIDARIDAD_TRAMOS.index((fraction_limit, rate)) > 0:
-            prev_idx = SOLIDARIDAD_TRAMOS.index((fraction_limit, rate)) - 1
-            prev_limit = max_base * SOLIDARIDAD_TRAMOS[prev_idx][0]
+        if fraction_limit != float("inf"):
+            # Width of this bracket in salary terms
+            tramo_size = max_base * (fraction_limit - prev_fraction)
+            current_tramo = min(restante, tramo_size)
+        else:
+            # Open-ended top bracket: apply to all remaining excess
+            current_tramo = restante
 
-        current_tramo = min(restante, tramo_size - prev_limit) if fraction_limit != float("inf") else restante
         if current_tramo <= 0:
             break
 
         cotizacion += current_tramo * rate
         restante -= current_tramo
+        prev_fraction = fraction_limit if fraction_limit != float("inf") else prev_fraction
 
     return cotizacion
+
+
+# Convenience wrappers for float-returning functions (backwards compatibility)
+def calcular_ss_trabajador(salario_bruto_anual: float) -> float:
+    """Return employee SS contribution as a float (annual amount)."""
+    return calcular_ss_empleado(salario_bruto_anual)["cuota_anual"]
+
+
+def calcular_ss_empresa_total(salario_bruto_anual: float) -> float:
+    """Return employer SS contribution as a float (annual amount)."""
+    return calcular_ss_empresa(salario_bruto_anual)["cuota_anual"]
+
+
+def calcular_solidaridad(salario_bruto_anual: float) -> float:
+    """Alias for calcular_cotizacion_solidaridad (backwards compatibility)."""
+    return calcular_cotizacion_solidaridad(salario_bruto_anual)
 
 
 # ============================================================

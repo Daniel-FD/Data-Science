@@ -108,8 +108,10 @@ CUOTA_AUTONOMOS_TABLA = [
 
 TARIFA_PLANA_MENSUAL = 87.0      # First 12 months for new autónomos
 TARIFA_PLANA_MESES = 12
-TARIFA_PLANA_EXTENDIDA_MENSUAL = 87.0  # Months 13-24 if income < SMI
+TARIFA_PLANA_REDUCIDA_MENSUAL = 172.0  # Months 13-24 second-year reduced tarifa plana
+TARIFA_PLANA_EXTENDIDA_MENSUAL = TARIFA_PLANA_REDUCIDA_MENSUAL  # Backwards-compatible alias
 SMI_ANUAL_2025 = 15_876.0        # Salario Mínimo Interprofesional
+SMI_MENSUAL = SMI_ANUAL_2025 / 12  # Monthly SMI derived from annual
 
 # ============================================================
 # SL FORMATION & ONGOING COSTS (informational)
